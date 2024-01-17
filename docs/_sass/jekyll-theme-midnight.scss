@@ -175,28 +175,7 @@ dt {
     .socials {
       float: right;
       display: inline;
-      margin-left: 0px;
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-          font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-weight: normal;
-          list-style: none;
-          display: inline;
-          line-height: 50px;
-          font-size: 14px;
-          margin-right: 5px;
-          margin-left: 5px;
-          a {
-            padding: 5px 6px;
-            margin-top: 3px;
-            display:inline-block;
-            text-align:center;
-          }
-        }
-      }
+      margin-left: 5px;
     }
 
     ul {
