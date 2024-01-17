@@ -5,4 +5,4 @@
 layout: default
 ---
 [about](https://T5impact.github.io/about/)
-![/images/LinkedInLogo.jpg](https://www.linkedin.com/in/luke-gamage-586550226/)
+![/docs/images/LinkedInLogo.jpg](https://www.linkedin.com/in/luke-gamage-586550226/)
