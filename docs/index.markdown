@@ -4,6 +4,3 @@
 
 layout: default
 ---
-[about](https://T5impact.github.io/about/)
-<br>
-[<img src="images/LinkedInLogo.png" align="right" width="50"/>](https://www.linkedin.com/in/luke-gamage-586550226/)
