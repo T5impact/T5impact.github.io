@@ -4,3 +4,12 @@
 @import "jekyll-theme-midnight";
 
 //max-width: 1920px; 
+.content {
+  margin-right: auto;
+  margin-left:  auto;
+  max-width: 1920px; 
+  // Or set a padding inside of the wrapper
+  padding-right: 10px; 
+  padding-left:  10px;
+  text-align: center;
+}
