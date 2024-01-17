@@ -5,4 +5,6 @@
 layout: default
 ---
 [about](https://T5impact.github.io/about/)
-[![](https://github.com/T5impact/T5impact.github.io/blob/main/docs/images/LinkedInLogo.png)](https://www.linkedin.com/in/luke-gamage-586550226/)
+[<img src="https://github.com/T5impact/T5impact.github.io/blob/main/docs/images/LinkedInLogo.png" width="25"/>](https://www.linkedin.com/in/luke-gamage-586550226/)
+
+https://github.com/T5impact/T5impact.github.io/blob/main/docs/images/LinkedInLogo.png
