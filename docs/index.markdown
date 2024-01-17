@@ -5,4 +5,4 @@
 layout: default
 ---
 <h1>Publications</h1>
-[](https://t5-impact.itch.io/hardy)
+[https://t5-impact.itch.io/hardy](https://t5-impact.itch.io/hardy)
