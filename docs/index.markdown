@@ -4,5 +4,5 @@
 
 layout: default
 ---
-<h1>Publications</h1>
-[https://t5-impact.itch.io/hardy](https://t5-impact.itch.io/hardy)
+<h1 text-align="center">Publications</h1>
+<a text-align="center" href="https://t5-impact.itch.io/hardy">https://t5-impact.itch.io/hardy</a>
