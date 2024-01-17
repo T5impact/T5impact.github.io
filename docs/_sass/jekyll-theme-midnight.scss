@@ -172,6 +172,11 @@ dt {
     background: blue;
     margin: 6px auto;
 
+    .socials {
+      float: right;
+      margin-left: 0px;
+    }
+
     ul {
       list-style-type: none;
       margin: 0;
