@@ -5,7 +5,10 @@
 
 //max-width: 1920px; 
 .content {
-  width: 1900px; 
+  //width: 1900px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // Or set a padding inside of the wrapper
   text-align: center;
 }
