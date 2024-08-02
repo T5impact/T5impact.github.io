@@ -164,6 +164,7 @@ strong {
 .publication-post {
   flex-direction: row-reverse;
   div {
+    display: flex;
     flex: auto;
   }
   ul {
