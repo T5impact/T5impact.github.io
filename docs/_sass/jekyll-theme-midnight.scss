@@ -153,7 +153,7 @@ strong {
   }
   li:nth-child(2n + 1) {
     //align-items: right;
-    flex-direction: row-reverse;
+    //flex-direction: row-reverse;
   }
 }
 .publication-img {
@@ -162,6 +162,7 @@ strong {
   border-radius: 10px;
 }
 .publication-post {
+  flex-direction: row-reverse;
   ul {
     list-style: none;
   }
