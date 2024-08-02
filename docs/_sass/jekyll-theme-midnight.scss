@@ -149,13 +149,20 @@ strong {
   }
 
   li:nth-child(2n) {
-    text-align: left;
+    align-items: left;
   }
   li:nth-child(2n + 1) {
-    text-align: right;
+    align-items: right;
   }
 }
-
+.publication-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+}
+.publication-post {
+  
+}
 section img {
   max-width: 100%;
 }
