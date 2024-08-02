@@ -29,9 +29,9 @@ h1, h2, h3 {
 
 }
 
-h1 {
-  font-size:28px;
-}
+//h1 {
+//  font-size:28px;
+//}
 
 h2 {
   font-size: 24px;
@@ -214,8 +214,12 @@ strong {
 }
 
 .publication-img {
-  width: 300px;
-  height: 300px;
+  max-width:300px;
+  max-height:300px;
+  width: auto;
+  height: auto;
+  //width: 300px;
+  //height: 300px;
   border-radius: 10px;
 }
 
