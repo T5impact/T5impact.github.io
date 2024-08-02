@@ -159,7 +159,7 @@ strong {
       ul {
         list-style: none;
       }
-      li {
+      li:nth-child(n) {
         display: inline-flex;
       }
     }
@@ -177,7 +177,7 @@ strong {
       ul {
         list-style: none;
       }
-      li {
+      li:nth-child(n) {
         display: inline-flex;
       }
     }
