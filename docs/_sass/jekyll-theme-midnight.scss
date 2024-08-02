@@ -258,7 +258,8 @@ strong {
 
 #technicalprojects {
   width: 100%;
-  height: 1000px;
+  min-height: 500;
+  overflow: auto;
   background: #1E1E1E;
   text-align: center;
 }
@@ -280,6 +281,7 @@ strong {
 .techpro-post {
   width: inherit;
   min-height: 300px;
+  margin: 0px auto 30px;
    
   ul {
     list-style: none;
