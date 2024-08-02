@@ -354,9 +354,14 @@ strong {
 }
 
 .techpro-post-title {
-  width: %100;
+  width: 100%;
   height: 75px;
   margin-top: 75px;
+}
+.techpro-post-content {
+  width: 100%;
+  min-height: 500px;
+  margin-top: 40px;
 }
 
 section img {
