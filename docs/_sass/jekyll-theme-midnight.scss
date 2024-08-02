@@ -277,43 +277,43 @@ strong {
   list-style-type: none;
   display: inline-block;
 }
- .techpro-post {
+.techpro-post {
   width: inherit;
-  height: auto;
+  min-height: 300px;
    
-    ul {
-      list-style: none;
-    }
-    li {
-      float: left;
+  ul {
+    list-style: none;
+  }
+  li {
+    float: left;
 
-      div {
-        margin-left: 30px;
-        width: 550px;
+    div {
+      margin-left: 30px;
+      width: 550px;
 
-        h1 {
-          text-align: left;
-          font-size: 40px;
+       h1 {
+        text-align: left;
+        font-size: 40px;
 
-          font-family: "Archivo Narrow", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: 400;
-          font-style: normal;
-        }
-        h1:hover {
-          text-decoration: underline;
-        }
-        p {
-          text-align: left;
-          font-size: 20px;
-
-          font-family: "Source Sans 3", sans-serif;
-          font-optical-sizing: auto;
-          font-weight: 300;
-          font-style: normal;
-        }
+        font-family: "Archivo Narrow", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
       }
-   }
+      h1:hover {
+        text-decoration: underline;
+      }
+      p {
+        text-align: left;
+        font-size: 20px;
+
+        font-family: "Source Sans 3", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+      }
+    }
+  }
 }
 .techpro-img {
   object-fit: cover;
