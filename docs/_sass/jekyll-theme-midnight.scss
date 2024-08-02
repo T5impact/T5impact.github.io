@@ -140,12 +140,12 @@ strong {
 #publications .container {
   padding: 25px auto;
   margin: 10px auto;
-  width: 900x;
+  width: 750x;
   height: auto;
   list-style-type: none;
 
   hl {
-    font-size: 40px;
+    font-size: 70px;
   }
 
   li:nth-child(2n) {
@@ -164,7 +164,16 @@ strong {
         display: inline-flex;
 
         div {
-          width: 400px;
+          width: 450px;
+
+          h1 {
+            text-align: left;
+            font-size: 40px
+          }
+          p {
+            text-align: left;
+            font-size: 20px
+          }
         }
       }
     }
@@ -187,7 +196,16 @@ strong {
         display: inline-flex;
 
         div {
-          width: 400px;
+          width: 450px;
+
+           h1 {
+            text-align: right;
+            font-size: 40px
+          }
+          p {
+            text-align: right;
+            font-size: 20px
+          }
         }
       }
     }
