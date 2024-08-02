@@ -161,7 +161,12 @@ strong {
   border-radius: 10px;
 }
 .publication-post {
-  
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline;
+  }
 }
 section img {
   max-width: 100%;
