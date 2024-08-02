@@ -139,7 +139,7 @@ strong {
 }
 .publication-header {
   font-size: 70px;
-  margin: 40px auto 40px;
+  margin: 0px auto 50px;
 }
 #publications .container {
   margin: 10px auto;
@@ -151,10 +151,7 @@ strong {
     float: left;
     
     .publication-post {
-      div {
-        //display: flex;
-        //flex: auto;
-      }
+      
       ul {
         list-style: none;
       }
@@ -182,10 +179,7 @@ strong {
     float: right;
     
     .publication-post {
-      div {
-        //display: flex;
-        //flex: auto;
-      }
+
       ul {
         list-style: none;
       }
