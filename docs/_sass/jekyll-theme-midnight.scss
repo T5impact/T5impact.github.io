@@ -394,11 +394,16 @@ strong {
 .techpro-post-content img {
   width: 400px;
   height: 400px;
+  object-fit: cover;
 }
 .float-left {
+  width: 300px;
+  height: 300px;
   float: left;
 }
 .float-right {
+  width: 300px;
+  height: 300px;
   float: right;
 }
 
