@@ -170,6 +170,9 @@ strong {
             font-family: Impact, Charcoal, sans-serif;
             font-weight: 400;
           }
+          h1:hover {
+            text-decoration: underline;
+          }
           p {
             text-align: left;
             font-size: 20px;
@@ -205,6 +208,9 @@ strong {
             font-family: Impact, Charcoal, sans-serif;
             font-weight: 400;
           }
+          h1:hover {
+            text-decoration: underline;
+          }
           p {
             text-align: right;
             font-size: 20px;
@@ -228,6 +234,9 @@ strong {
   //width: 300px;
   //height: 300px;
   border-radius: 10px;
+}
+.publication-img:hover {
+  box-shadow: 0px 0px 10px 7px rgba(0,0,0,0.62);
 }
 
 section img {
