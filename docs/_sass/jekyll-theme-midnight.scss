@@ -400,9 +400,12 @@ strong {
   text-indent: 35px;
 }
 .techpro-post-content img {
-  width: 400px;
-  height: 400px;
+  min-height: 400px;
   object-fit: cover;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .float-left {
   //width: 300px;
