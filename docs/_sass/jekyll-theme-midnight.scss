@@ -86,7 +86,9 @@ strong {
 #banner {
   background: url(/images/BannerPicture.png);
   //background: #3D4348 url("/images/BannerPicture.png") no-repeat fixed 50% 50%;
-  background-size: cover;
+  //background-size: cover;
+  width: %100;
+  height: 1080px;
   background-position: center;
 }
 
