@@ -563,39 +563,42 @@ section {
   top: 4%;
   left: 4%;
   width: 400px;
-  float: left;
+  //float: left;
   margin-left: 0px;
   background: none;
   margin: auto;
   display: inline;
 }
+#back-btn div {
+  float: left;
+}
 //.back-btn a {
 //  background: none;
 //  
 //}
-#back-btn ul {
-  list-style-type: none;
-}
-#back-btn ul li {
-  float: left;
-  height: 100%;
-}
-#back-btn ul li div {
-  text-align: center;
-  width: 200px;
-  margin: auto;
-  padding: 10px 0px 10px 0px;
-}
-#back-btn ul li div h1 {
+//#back-btn ul {
+//  list-style-type: none;
+//}
+//#back-btn ul li {
+//  float: left;
+//  height: 100%;
+//}
+//#back-btn ul li div {
+//  text-align: center;
+//  width: 200px;
+//  margin: auto;
+//  padding: 10px 0px 10px 0px;
+//}
+//#back-btn ul li div h1 {
   //float: left;
-  font-size: 16px;
-  text-align: center;
-  height: 45px;
-  font-family: "Six Caps", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 6px;
-}
+//  font-size: 16px;
+//  text-align: center;
+//  height: 45px;
+//  font-family: "Six Caps", sans-serif;
+//  font-weight: 400;
+//  font-style: normal;
+//  letter-spacing: 6px;
+//}
 #back-btn img{
   width: 40px;
   height: 40px;
