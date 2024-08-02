@@ -95,12 +95,14 @@ strong {
 }
 
 .self-img {
-  width: 400px;
-  height: 400px;
-  margin: 75px auto 0;
-  align-self: center;
+  padding-top: 200px;
+  text-align: center;
   //top: 50%;
   //left: 50%;
+}
+.self-img img {
+  width: 400px;
+  height: 400px;
 }
 
 section img {
