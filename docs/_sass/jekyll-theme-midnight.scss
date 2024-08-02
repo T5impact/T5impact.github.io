@@ -580,7 +580,10 @@ section {
   float: left;
   height: 100%;
 }
-#back-btn ul li h1 {
+#back-btn ul li div {
+  text-align: center;
+}
+#back-btn ul li div h1 {
   //float: left;
   font-size: 16px;
   text-align: center;
