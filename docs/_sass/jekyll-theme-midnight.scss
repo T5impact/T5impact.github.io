@@ -278,7 +278,9 @@ strong {
   display: inline-block;
 }
  .techpro-post {
-      
+  width: inherit;
+  height: auto;
+   
     ul {
       list-style: none;
     }
