@@ -95,15 +95,6 @@ strong {
   border-bottom: 4px solid #434343;
 }
 
-.back-btn {
-  float: left;
-  margin-left: 0px;
-  background: none;
-}
-.back-btn img{
-  width: 40px;
-  height: 40px;
-}
 
 .self-img {
   padding-top: 160px;
@@ -565,6 +556,21 @@ section {
     }
 
   }
+}
+
+
+.back-btn {
+  float: left;
+  margin-left: 0px;
+  background: none;
+}
+.back-btn a {
+  background: none;
+  
+}
+.back-btn img{
+  width: 40px;
+  height: 40px;
 }
 
 @media print, screen and (max-width: 720px) {
