@@ -107,21 +107,22 @@ strong {
 }
 
 .self-img h1 {
-  font-family: Impact, Charcoal, sans-serif;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 45px;
   letter-spacing: 1px;
   word-spacing: 0px;
   color: #FFFFFF;
-  font-weight: 400;
   text-decoration: none;
-  font-style: normal;
   font-variant: normal;
   text-transform: capitalize;
   text-shadow: 0px 5px 7px rgba(0,0,0,1);
 }
 .self-img p {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 100;
+  font-family: "Archivo Narrow", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
   font-size: 20px;
   letter-spacing: 0px;
@@ -140,6 +141,9 @@ strong {
 .publication-header {
   font-size: 70px;
   margin: 0px auto 50px;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 #publications .container {
   margin: 10px auto;
@@ -167,8 +171,10 @@ strong {
             text-align: left;
             font-size: 40px;
 
-            font-family: Impact, Charcoal, sans-serif;
+            font-family: "Archivo Narrow", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 400;
+            font-style: normal;
           }
           h1:hover {
             text-decoration: underline;
@@ -177,8 +183,9 @@ strong {
             text-align: left;
             font-size: 20px;
 
-            font-family: "M PLUS Rounded 1c", sans-serif;
-            font-weight: 100;
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
             font-style: normal;
           }
         }
@@ -205,8 +212,10 @@ strong {
             text-align: right;
             font-size: 40px;
 
-            font-family: Impact, Charcoal, sans-serif;
+            font-family: "Archivo Narrow", sans-serif;
+            font-optical-sizing: auto;
             font-weight: 400;
+            font-style: normal;
           }
           h1:hover {
             text-decoration: underline;
@@ -215,8 +224,9 @@ strong {
             text-align: right;
             font-size: 20px;
 
-            font-family: "M PLUS Rounded 1c", sans-serif;
-            font-weight: 100;
+            font-family: "Source Sans 3", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
             font-style: normal;
           }
         }
