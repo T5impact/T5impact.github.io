@@ -566,7 +566,6 @@ section {
   float: left;
   margin-left: 0px;
   background: none;
-  text-align: center;
   margin: auto;
   display: inline;
 }
@@ -583,7 +582,8 @@ section {
 #back-btn h1 {
   //float: left;
   font-size: 16px;
-  margin: 0px auto 50px;
+  text-align: center;
+  margin: auto;
   font-family: "Six Caps", sans-serif;
   font-weight: 400;
   font-style: normal;
