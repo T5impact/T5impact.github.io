@@ -137,7 +137,9 @@ strong {
 #publications {
   padding-top: 40px;
   text-align: center;
-  clear: both;
+  display: block;
+  height: auto;
+  //clear: both;
 }
 .publication-header {
   font-size: 100px;
