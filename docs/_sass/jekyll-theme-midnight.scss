@@ -399,11 +399,14 @@ strong {
 
   text-indent: 35px;
 }
+.techpro-post-content div {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
 .techpro-post-content img {
   min-height: 400px;
   object-fit: cover;
-  margin-left: 50%;
-  margin-right: 50%;
   margin-top: 15px;
   margin-bottom: 15px;
 }
