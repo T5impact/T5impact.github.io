@@ -152,7 +152,8 @@ strong {
     align-items: left;
   }
   li:nth-child(2n + 1) {
-    align-items: right;
+    //align-items: right;
+    flex-direction: row-reverse;
   }
 }
 .publication-img {
