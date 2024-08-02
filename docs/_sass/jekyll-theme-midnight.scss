@@ -149,7 +149,7 @@ strong {
   }
 
   li:nth-child(2n) {
-    float: right;
+    float: left;
     .publication-post {
       //flex-direction: row-reverse;
       div {
@@ -160,12 +160,13 @@ strong {
         list-style: none;
       }
       li:nth-child(n) {
+        float: left;
         display: inline-flex;
       }
     }
   }
   li:nth-child(2n + 1) {
-    float: left;
+    float: right;
     //align-items: right;
     //flex-direction: row-reverse;
     .publication-post {
@@ -178,6 +179,7 @@ strong {
         list-style: none;
       }
       li:nth-child(n) {
+        float: right;
         display: inline-flex;
       }
     }
