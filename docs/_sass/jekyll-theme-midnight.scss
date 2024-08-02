@@ -571,7 +571,18 @@ section {
 }
 #back-btn div {
   float: left;
+  height: 45pix;
   text-align: center;
+}
+#back-btn div h1 {
+  float: left;
+  font-size: 16px;
+  text-align: center;
+  line-height: 45px;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 6px;
 }
 //.back-btn a {
 //  background: none;
