@@ -259,7 +259,22 @@ strong {
 #technicalprojects {
   width: 100%;
   height: 1000px;
-  background: #1E1E1E;;
+  background: #1E1E1E;
+}
+.techpro-header {
+  font-size: 100px;
+  margin: 0px auto 50px;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 6px;
+}
+#technicalprojects .container {
+  margin: 10px auto;
+  width: 1050px;
+  height: auto;
+  list-style-type: none;
+  display: inline-block;
 }
 
 section img {
