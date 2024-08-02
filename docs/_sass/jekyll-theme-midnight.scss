@@ -371,8 +371,8 @@ strong {
   width: 100%;
   min-height: 500px;
   margin-top: 40px;
-  margin-left: 10%;
-  margin-right: 10%;
+  //margin-left: 10%;
+  //margin-right: 10%;
   //margin 40px 20% 20% 0px;
 }
 .techpro-post-content h1 {
@@ -393,6 +393,9 @@ strong {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .techpro-post-content img {
   width: 400px;
