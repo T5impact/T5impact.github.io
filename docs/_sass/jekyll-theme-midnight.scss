@@ -336,10 +336,13 @@ strong {
   width: 10px;
 }
 
-
+::-webkit-scrollbar-track {
+  background: #444444;
+}
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
   background: linear-gradient(to bottom, #247A27 0%, #080B35 100%);;
 }
 
