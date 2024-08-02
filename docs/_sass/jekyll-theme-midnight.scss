@@ -137,20 +137,19 @@ strong {
   padding-top: 40px;
   text-align: center;
 }
+.publication-header {
+  font-size: 70px;
+}
 #publications .container {
   margin: 10px auto;
   width: 1050px;
   height: auto;
   list-style-type: none;
-
-  hl {
-    font-size: 70px;
-  }
-
+  
   li:nth-child(2n) {
     float: left;
+    
     .publication-post {
-      //flex-direction: row-reverse;
       div {
         //display: flex;
         //flex: auto;
@@ -180,10 +179,8 @@ strong {
   }
   li:nth-child(2n + 1) {
     float: right;
-    //align-items: right;
-    //flex-direction: row-reverse;
+    
     .publication-post {
-      //flex-direction: row-reverse;
       div {
         //display: flex;
         //flex: auto;
