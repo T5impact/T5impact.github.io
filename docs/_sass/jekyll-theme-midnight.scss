@@ -149,9 +149,10 @@ strong {
   }
 
   li:nth-child(2n) {
-    align-items: left;
+    float: left;
   }
   li:nth-child(2n + 1) {
+    float: right;
     //align-items: right;
     //flex-direction: row-reverse;
   }
@@ -162,16 +163,16 @@ strong {
   border-radius: 10px;
 }
 .publication-post {
-  flex-direction: row-reverse;
+  //flex-direction: row-reverse;
   div {
-    display: flex;
-    flex: auto;
+    //display: flex;
+    //flex: auto;
   }
   ul {
     list-style: none;
   }
   li {
-    display: inline-flex;
+    //display: inline-flex;
   }
 }
 section img {
