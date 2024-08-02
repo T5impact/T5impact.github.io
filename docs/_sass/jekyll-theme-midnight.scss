@@ -163,6 +163,9 @@ strong {
 }
 .publication-post {
   flex-direction: row-reverse;
+  div {
+    flex: auto;
+  }
   ul {
     list-style: none;
   }
