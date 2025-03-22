@@ -261,10 +261,13 @@ strong {
                 }
 
                 .game-post-media {
-                    div {
-                        align-items: center;
-                        display: flex;
 
+                    .game-post-media-grid {
+                        display: grid;
+                        grid-template-columns: auto auto auto;
+                    }
+
+                    /*div {
                         ul {
                             list-style: none;
                             display: inline-flex;
@@ -286,7 +289,7 @@ strong {
                                 }
                             }
                         }
-                    }
+                    }*/
                 }
 
                 .game-post-code {
