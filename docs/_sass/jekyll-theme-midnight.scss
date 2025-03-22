@@ -265,8 +265,21 @@ strong {
                     .game-post-media-grid {
                         display: grid;
                         grid-template-columns: auto auto auto;
-                    }
 
+                        img {
+                            width: 300px;
+                            height: 300px;
+                        }
+
+                        p {
+                            text-align: center;
+                            font-size: 20px;
+                            font-family: "Source Sans 3", sans-serif;
+                            font-optical-sizing: auto;
+                            font-weight: 300;
+                            font-style: normal;
+                        }
+                    }
                     /*div {
                         ul {
                             list-style: none;
