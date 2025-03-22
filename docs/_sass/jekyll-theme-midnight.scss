@@ -264,8 +264,10 @@ strong {
 
                     .game-post-media-grid {
                         display: grid;
-                        grid-auto-flow: column;
-                        grid-auto-columns: 400px;
+                        // grid-auto-flow: column;
+                        //grid-auto-columns: 400px;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
                         gap: 10px;
                         padding: 10px;
 
