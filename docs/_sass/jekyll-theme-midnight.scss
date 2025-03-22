@@ -261,26 +261,28 @@ strong {
                 }
 
                 .game-post-media {
-                    align-items: center;
+                    div {
+                        align-items: center;
 
-                    ul {
-                        list-style: none;
-                        display: inline-flex;
+                        ul {
+                            list-style: none;
+                            display: inline-flex;
 
-                        li {
+                            li {
 
-                            img {
-                                width: 300px;
-                                height: 300px;
-                            }
+                                img {
+                                    width: 300px;
+                                    height: 300px;
+                                }
 
-                            p {
-                                text-align: center;
-                                font-size: 20px;
-                                font-family: "Source Sans 3", sans-serif;
-                                font-optical-sizing: auto;
-                                font-weight: 300;
-                                font-style: normal;
+                                p {
+                                    text-align: center;
+                                    font-size: 20px;
+                                    font-family: "Source Sans 3", sans-serif;
+                                    font-optical-sizing: auto;
+                                    font-weight: 300;
+                                    font-style: normal;
+                                }
                             }
                         }
                     }
