@@ -194,7 +194,10 @@ strong {
         margin: 10px auto;
         width: 80%;
         height: auto;
-        list-style: none;
+
+        ul {
+            list-style: none;
+        }
         //list-style-type: none;
 
         .game-post {
@@ -215,13 +218,17 @@ strong {
                             border-radius: 10px;
                         }
 
-                        p {
-                            text-align: left;
-                            font-size: 20px;
-                            font-family: "Source Sans 3", sans-serif;
-                            font-optical-sizing: auto;
-                            font-weight: 300;
-                            font-style: normal;
+                        div {
+                            margin-left: 30px;
+
+                            p {
+                                text-align: left;
+                                font-size: 20px;
+                                font-family: "Source Sans 3", sans-serif;
+                                font-optical-sizing: auto;
+                                font-weight: 300;
+                                font-style: normal;
+                            }
                         }
                     }
                 }
