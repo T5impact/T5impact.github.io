@@ -197,6 +197,7 @@ strong {
         //list-style-type: none;
 
         .game-post {
+            list-style: none;
 
             div {
                 width: 80%;
@@ -204,7 +205,8 @@ strong {
                 .game-post-main {
 
                     ul {
-                        display: inline-flex
+                        list-style: none;
+                        display: inline-flex;
                     }
                 }
 
