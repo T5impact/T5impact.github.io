@@ -213,7 +213,7 @@ strong {
                         display: inline-flex;
 
                         @media (max-width: 720px) {
-                            display: flex;
+                            flex-direction: column;
                         }
 
                         img {
