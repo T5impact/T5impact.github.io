@@ -212,7 +212,7 @@ strong {
                         list-style: none;
                         display: inline-flex;
 
-                        @media (max-width: 720px) {
+                        @media (max-width: 1080px) {
                             flex-direction: column;
                         }
 
@@ -222,7 +222,7 @@ strong {
                             height: 400px;
                             border-radius: 10px;
 
-                            @media (max-width: 720px) {
+                            @media (max-width:1080px) {
                                 width: 300px;
                                 height: 300px;
                             }
@@ -239,6 +239,10 @@ strong {
                                 font-optical-sizing: auto;
                                 font-weight: 400;
                                 font-style: normal;
+
+                                @media (max-width:1080px) {
+                                    text-align: center;
+                                }
                             }
 
                             p {
