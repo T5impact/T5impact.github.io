@@ -212,11 +212,20 @@ strong {
                         list-style: none;
                         display: inline-flex;
 
+                        @media (max-width: 720px) {
+                            display: flex;
+                        }
+
                         img {
                             object-fit: cover;
                             width: 400px;
                             height: 400px;
                             border-radius: 10px;
+
+                            @media (max-width: 720px) {
+                                width: 300px;
+                                height: 300px;
+                            }
                         }
 
                         div {
