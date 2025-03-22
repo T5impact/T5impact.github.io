@@ -198,10 +198,20 @@ strong {
 
         .game-post {
 
-            li {
+            div {
+                width: 80%;
 
-                div {
+                .game-post-main {
 
+                    ul {
+                        display: inline-flex
+                    }
+                }
+
+                .game-post-media {
+                }
+
+                .game-post-code {
                 }
             }
         }
