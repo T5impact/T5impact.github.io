@@ -264,13 +264,16 @@ strong {
 
                     .game-post-media-grid {
                         display: grid;
-                        grid-template-columns: auto auto auto;
+                        grid-auto-flow: column;
+                        grid-auto-columns: 400px;
                         gap: 10px;
                         padding: 10px;
 
                         img {
                             width: 300px;
                             height: 300px;
+                            margin-left: auto;
+                            margin-right: auto;
                         }
 
                         p {
