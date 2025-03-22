@@ -261,6 +261,28 @@ strong {
                 }
 
                 .game-post-media {
+
+                    ul {
+                        list-style: none;
+                        display: inline-flex;
+
+                        li {
+
+                            img {
+                                width: 300px;
+                                height: 300px;
+                            }
+
+                            p {
+                                text-align: center;
+                                font-size: 20px;
+                                font-family: "Source Sans 3", sans-serif;
+                                font-optical-sizing: auto;
+                                font-weight: 300;
+                                font-style: normal;
+                            }
+                        }
+                    }
                 }
 
                 .game-post-code {
