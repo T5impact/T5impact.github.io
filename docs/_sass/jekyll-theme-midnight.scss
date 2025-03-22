@@ -177,17 +177,17 @@ strong {
 #gameprojects {
     display: block;
     padding-top: 40px;
-    text-align: center;
     min-height: 500px;
     overflow: auto;
 
     .gameprojects-header {
         font-size: 100px;
-        margin: 0px auto 50px;
+        margin: 50px auto 50px;
         font-family: "Six Caps", sans-serif;
         font-weight: 400;
         font-style: normal;
         letter-spacing: 6px;
+        text-align: center;
     }
 
     .game-container {
