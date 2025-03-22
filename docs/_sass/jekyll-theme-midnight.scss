@@ -265,6 +265,8 @@ strong {
                     .game-post-media-grid {
                         display: grid;
                         grid-template-columns: auto auto auto;
+                        gap: 10px;
+                        padding: 10px;
 
                         img {
                             width: 300px;
