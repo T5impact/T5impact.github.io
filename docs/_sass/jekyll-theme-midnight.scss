@@ -259,6 +259,10 @@ strong {
                             margin-left: 30px;
                             //margin-right: 30px;
 
+                            @media (max-width: 1080px) {
+                                margin-left: 0px;
+                            }
+
                             h1 {
                                 text-align: left;
                                 font-size: 40px;
