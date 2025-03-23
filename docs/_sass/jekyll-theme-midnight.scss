@@ -250,8 +250,8 @@ strong {
                             margin-right: auto;
 
                             @media (max-width:1080px) {
-                                width: 400px;
-                                height: 400px;
+                                width: minmax(200px, 400px);
+                                height: minmax(200px, 400px);
                             }
                         }
 
