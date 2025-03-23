@@ -233,10 +233,11 @@ strong {
 
             div {
                 width: auto;
-                margin: 0px 100px 0px 100px;
+                margin: 0px;
+                padding: 0px 100px 0px 100px;
 
                 @media (max-width: 1080px) {
-                    margin: 0px 75px 0px 75px;
+                    padding: 0px 75px 0px 75px;
                 }
 
                 .game-post-main {
