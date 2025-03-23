@@ -205,6 +205,10 @@ strong {
         .game-post {
             list-style: none;
 
+            ul {
+                padding: 0px 0px 0px 0px;
+            }
+
             div {
                 width: auto;
 
@@ -265,6 +269,7 @@ strong {
                 }
 
                 .game-post-media {
+                    margin: 20px 0px 20px 0px;
 
                     .game-post-media-grid {
                         display: grid;
@@ -295,6 +300,7 @@ strong {
                 }
 
                 .game-post-code {
+                    margin: 20px 0px 20px 0px;
 
                     h1 {
                         text-align: left;
