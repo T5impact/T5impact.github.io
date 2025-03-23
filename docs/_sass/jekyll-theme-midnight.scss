@@ -242,9 +242,11 @@ strong {
 
                 .game-post-main {
                     margin: 20px 0px 20px 0px;
+                    padding: 0px;
 
                     div {
                         margin: 20px 0px 20px 0px;
+                        padding: 0px;
 
                         p {
                             text-align: left;
@@ -283,6 +285,7 @@ strong {
 
                         div {
                             margin-left: 30px;
+                            padding: 0px;
                             //margin-right: 30px;
 
                             @media (max-width: 1080px) {
