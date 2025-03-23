@@ -181,6 +181,14 @@ strong {
     min-height: 500px;
     overflow: auto;
 
+    .game-post-bg1 {
+        background-color: #343434;
+    }
+
+    .game-post-bg2 {
+        background-color: #2B2B2B;
+    }
+
     .gameprojects-header {
         font-size: 100px;
         margin: auto auto 50px;
@@ -213,14 +221,6 @@ strong {
 
             ul {
                 padding: 0px 0px 0px 0px;
-            }
-
-            .game-post-bg1 {
-                background-color: #343434;
-            }
-
-            .game-post-bg2 {
-                background-color: #2B2B2B;
             }
 
             .game-post-border {
