@@ -203,11 +203,11 @@ strong {
         width: 100%;
         height: auto;
         padding: 0px;
-        padding: 0% 30px 0% 30px;
+        //padding: 0% 30px 0% 30px;
 
         @media (max-width:1080px) {
             //width: 90%;
-            padding: 0% 20px 0% 20px;
+            //padding: 0% 20px 0% 20px;
         }
 
         ul {
@@ -224,6 +224,7 @@ strong {
 
             div {
                 width: auto;
+                margin: 0px 50px 0px 50px;
 
                 .game-post-main {
                     margin: 20px 0px 20px 0px;
