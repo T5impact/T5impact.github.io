@@ -177,13 +177,13 @@ strong {
 
 #gameprojects {
     display: block;
-    padding-top: 40px;
+    //padding-top: 40px;
     min-height: 500px;
     overflow: auto;
 
     div {
         margin: 0px;
-        padding: 0px;
+        padding: 40px 0px 50px 0px;
     }
 
     .game-post-bg1 {
@@ -196,7 +196,7 @@ strong {
 
     .gameprojects-header {
         font-size: 100px;
-        margin: auto auto 50px;
+        //margin: auto auto 50px;
         font-family: "Six Caps", sans-serif;
         font-weight: 400;
         font-style: normal;
