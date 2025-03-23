@@ -181,6 +181,11 @@ strong {
     min-height: 500px;
     overflow: auto;
 
+    div {
+        margin: 0px;
+        padding: 0px;
+    }
+
     .game-post-bg1 {
         background-color: #343434;
     }
