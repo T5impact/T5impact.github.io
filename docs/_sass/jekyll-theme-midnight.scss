@@ -215,6 +215,12 @@ strong {
                 padding: 0px 0px 0px 0px;
             }
 
+            li:nth-child(2n) {
+                div {
+                    background-color: #343434;
+                }
+            }
+
 
             .game-post-border {
                 width: 100%;
