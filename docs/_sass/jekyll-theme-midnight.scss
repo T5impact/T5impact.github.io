@@ -212,6 +212,8 @@ strong {
         text-align: center;
     }
 
+
+
     .game-container {
         margin: auto;
         width: 100%;
@@ -295,6 +297,9 @@ strong {
                                 height: 300px;
                             }
                         }
+                        img:hover {
+                            box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.62);
+                        }
 
 
                         div {
@@ -317,6 +322,9 @@ strong {
                                 @media (max-width:1080px) {
                                     text-align: center;
                                 }
+                            }
+                            h1:hover {
+                                text-decoration: underline;
                             }
 
                             p {
