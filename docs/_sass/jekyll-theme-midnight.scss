@@ -192,10 +192,13 @@ strong {
 
     .game-container {
         margin: auto;
-        width: 90%;
+        width: 80%;
         height: auto;
         padding: 0px 0px 0px 0px;
 
+        @media (max-width:1080px) {
+            width: 90%;
+        }
 
         ul {
             list-style: none;
