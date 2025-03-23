@@ -200,9 +200,9 @@ strong {
 
     .game-container {
         margin: auto;
-        width: 80%;
+        width: 100%;
         height: auto;
-        padding: 0px 0px 0px 0px;
+        padding: 0% 10% 0% 10%;
 
         @media (max-width:1080px) {
             width: 90%;
