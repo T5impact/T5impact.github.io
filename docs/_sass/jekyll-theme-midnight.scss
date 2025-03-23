@@ -215,6 +215,15 @@ strong {
                 .game-post-main {
                     margin: 20px 0px 20px 0px;
 
+                    p {
+                        text-align: left;
+                        font-size: 20px;
+                        font-family: "Source Sans 3", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 300;
+                        font-style: normal;
+                    }
+
                     ul {
                         list-style: none;
                         display: inline-flex;
