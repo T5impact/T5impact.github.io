@@ -302,11 +302,17 @@ strong {
                         justify-content: center;
 
                         img {
-                            width: 300px;
+                            width: 400px;
                             height: 300px;
                             display: block;
                             margin-left: auto;
                             margin-right: auto;
+                            object-fit: cover;
+
+                            @media (max-width:720px) {
+                                width: 320px;
+                                height: 240px;
+                            }
                         }
 
                         video {
@@ -356,11 +362,17 @@ strong {
                         justify-content: center;
 
                         img {
-                            width: 300px;
+                            width: 400px;
                             height: 300px;
                             display: block;
                             margin-left: auto;
                             margin-right: auto;
+                            object-fit: cover;
+
+                            @media (max-width:720px) {
+                                width: 320px;
+                                height: 240px;
+                            }
                         }
 
                         video {
