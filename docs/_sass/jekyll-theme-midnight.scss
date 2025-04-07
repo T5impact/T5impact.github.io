@@ -417,6 +417,16 @@ strong {
                         text-align: center;
                     }
 
+                    p {
+                        text-align: left;
+                        font-size: 25px;
+                        font-family: "Archivo Narrow", sans-serif;
+                        font-optical-sizing: auto;
+                        font-weight: 400;
+                        font-style: normal;
+                        text-align: center;
+                    }
+
                     .game-post-code-grid {
                         display: grid;
                         // grid-auto-flow: column;
