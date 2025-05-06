@@ -14,6 +14,7 @@
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
+    <script src="assets/js/index.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -40,14 +41,17 @@
         </nav>
       </div><!-- end header -->
     <div id="banner">
-        <div class="self-img">
-            <img src="images/selfpic.png">
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <FadeInSection>
+            <div class="self-img">
+                <img src="images/selfpic.png">
+                <h1>{{ site.title | default: site.github.repository_name }}</h1>
+
             <!--<p>{{ site.description | default: site.github.project_tagline }}</p>-->
-            <p>Game Developer who specializes in gameplay and graphics programming.<br>I aim to design and implement amazing game mechanics and stunning graphics using high-level mathematics.<br>I prioritize clear, modular, easy-to-read code and ensuring proper structure.</p>
-            <!--<p>I aim to design and implement amazing game mechanics and stunning graphics using high-level mathematics</p>
-            <p>I prioritize clear, modular, easy-to-read code ensuring proper code structure</p>-->
-        </div>
+                <p>Game Developer who specializes in gameplay and graphics programming.<br>I aim to design and implement amazing game mechanics and stunning graphics using high-level mathematics.<br>I prioritize clear, modular, easy-to-read code and ensuring proper structure.</p>
+                <!--<p>I aim to design and implement amazing game mechanics and stunning graphics using high-level mathematics</p>
+        <p>I prioritize clear, modular, easy-to-read code ensuring proper code structure</p>-->
+            </div>
+        </FadeInSection>
     </div>
     <div id="gameprojects">
         <div class="game-post-bg1"><h1 class="gameprojects-header">Games</h1></div>
