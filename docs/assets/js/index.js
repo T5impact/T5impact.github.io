@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import '_sass/jekyll-theme-midnight.scss';
+
 function FadeInSection(props) {
   const [isVisible, setVisible] = React.useState(false);
   const domRef = React.useRef();
