@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Six+Caps&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
     <script defer src="index.js"></script>
     <!--[if lt IE 9]>
@@ -40,7 +41,7 @@
           <a class="socials" href="https://github.com/T5impact"><img src="images/GitHubLogo.png" width="40"></a>
         </nav>
       </div><!-- end header -->
-    <div id="banner">
+    <div id="banner" data-aos="fade-in">
             <div class="self-img">
                 <img class="fade-in" src="images/selfpic.png">
                 <h1>{{ site.title | default: site.github.repository_name }}</h1>
@@ -51,7 +52,12 @@
         <p>I prioritize clear, modular, easy-to-read code ensuring proper code structure</p>-->
             </div>
     </div>
-    <div id="gameprojects">
+    <div
+      id="gameprojects"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-anchor-placement="top-center"
+    >
         <div class="game-post-bg1"><h1 class="gameprojects-header">Games</h1></div>
         <ul class="game-container">
             <li class="game-post">
@@ -154,7 +160,12 @@
                 </div>
                 <div class="game-post-border "></div>
             </li>
-            <li class="game-post">
+            <li
+              class="game-post"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor-placement="top-center"
+            >
                 <div class="game-post-bg2">
                     <ul>
                         <li class="game-post-main">
@@ -254,7 +265,12 @@
                 </div>
                 <div class="game-post-border "></div>
             </li>
-            <li class="game-post">
+            <li
+              class="game-post"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor-placement="top-center"
+            >
                 <div class="game-post-bg1">
                     <ul>
                         <li class="game-post-main">
@@ -344,7 +360,12 @@
                 </div>
                 <div class="game-post-border "></div>
             </li>
-            <li class="game-post">
+            <li
+              class="game-post"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-anchor-placement="top-center"
+            >
                 <div class="game-post-bg2">
                     <ul>
                         <li class="game-post-main">
@@ -567,7 +588,12 @@
         </li>
       </ul>
     </div>-->
-    <div id="technicalprojects">
+    <div
+      id="technicalprojects"
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-anchor-placement="top-center"
+    >
       <ul class="container">
         <h1 class="techpro-header">Projects</h1>
         <li>
@@ -655,5 +681,9 @@
         <!--{{ content }}-->
       <!--</section>-->
     <!--</div>-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
