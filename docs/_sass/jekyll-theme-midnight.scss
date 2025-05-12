@@ -196,7 +196,7 @@ strong {
     display: block;
     //padding-top: 40px;
     min-height: 500px;
-    overflow: auto;
+    overflow: hidden;
 
     div {
         margin: 0px;
@@ -694,7 +694,7 @@ strong {
 #technicalprojects {
   width: 100%;
   min-height: 500;
-  overflow: auto;
+  overflow: hidden;
   background: #1E1E1E;
   text-align: center;
   padding-top: 48px;
