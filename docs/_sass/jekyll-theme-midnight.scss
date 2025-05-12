@@ -502,7 +502,7 @@ strong {
 #gameprojects {
     display: block;
     min-height: 500px;
-    overflow: auto;
+    overflow: hidden;
 
     // Base spacing for inner div
     div {
