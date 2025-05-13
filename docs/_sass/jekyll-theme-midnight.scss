@@ -20,19 +20,19 @@ h4,
 h5,
 h6 {
   color: #e8e8e8;
-  margin: 0 0 10px;
+  //margin: 0 0 10px;
   // font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   // font-weight: normal;
 }
 
-p,
-ul,
-ol,
-table,
-pre,
-dl {
-  //margin: 0 0 20px;
-}
+// p,
+// ul,
+// ol,
+// table,
+// pre,
+// dl {
+//   //margin: 0 0 20px;
+// }
 
 // h1,
 // h2,
@@ -186,6 +186,7 @@ strong {
   font-variant: normal;
   text-transform: none;
   text-shadow: 0px 5px 7px rgba(0, 0, 0, 1);
+  text-align: center;
 
   @media (max-width: 720px) {
     font-size: 28px;
@@ -481,29 +482,29 @@ strong {
         padding-right: 48px;
       }
 
-      h2 {
-        //text-align: left;
-        // font-size: 40px;
+      // h2 {
+      //   //text-align: left;
+      //   // font-size: 40px;
 
-        // font-family: "Archivo Narrow", sans-serif;
-        //font-optical-sizing: auto;
-        //font-weight: 400;
-        //font-style: normal;
-      }
+      //   // font-family: "Archivo Narrow", sans-serif;
+      //   //font-optical-sizing: auto;
+      //   //font-weight: 400;
+      //   //font-style: normal;
+      // }
 
       h2:hover {
         text-decoration: underline;
       }
 
-      p {
-        //text-align: left;
-        //font-size: 25px;
+      // p {
+      //   //text-align: left;
+      //   //font-size: 25px;
 
-        //font-family: "Source Sans 3", sans-serif;
-        //font-optical-sizing: auto;
-        //font-weight: 300;
-        //font-style: normal;
-      }
+      //   //font-family: "Source Sans 3", sans-serif;
+      //   //font-optical-sizing: auto;
+      //   //font-weight: 300;
+      //   //font-style: normal;
+      // }
     }
   }
 }
