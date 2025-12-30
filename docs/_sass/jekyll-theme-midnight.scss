@@ -101,6 +101,226 @@ a small {
 //  list-style-image:url('../images/bullet.png');
 //}
 
+
+
+/* =========================
+   CSS RESET / BASE
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #e6e6e6;
+  background-color: #0f1115;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #9fd3ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT HELPERS
+   ========================= */
+
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section-alt {
+  background-color: #141822;
+}
+
+.section-title {
+  max-width: 1100px;
+  margin: 0 auto 2.5rem auto;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   HERO / HEADER
+   ========================= */
+
+.site-header {
+  padding: 4rem 1.5rem 3rem;
+  border-bottom: 1px solid #222634;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #b8c0ff;
+}
+
+.hero-skills {
+  font-size: 0.95rem;
+  color: #aab0c3;
+  margin-bottom: 1.25rem;
+}
+
+.hero-summary {
+  max-width: 700px;
+  font-size: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hero-links a {
+  font-weight: 600;
+}
+
+/* =========================
+   CARD GRID
+   ========================= */
+
+.card-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================
+   CARD
+   ========================= */
+
+.card {
+  background-color: #181d2a;
+  border: 1px solid #252b3d;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card img {
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.card-role {
+  font-size: 0.85rem;
+  color: #b2b8d8;
+  margin-bottom: 0.75rem;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #d2d6f0;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid #222634;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #8f96b3;
+}
+
+/* =========================
+   RESPONSIVE TUNING
+   ========================= */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 3rem 1.25rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ====================================================================== //
+
 strong {
   font-family: 'OpenSansBold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
