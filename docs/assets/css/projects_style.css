@@ -102,7 +102,7 @@ li {
 
 /* ===== Sections ===== */
 .project-section {
-  padding: 3rem 1.5rem;
+  padding: 1.0rem 1.5rem;
 }
 
 .project-section:nth-of-type(even) {
