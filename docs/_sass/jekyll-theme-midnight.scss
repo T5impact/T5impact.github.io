@@ -362,7 +362,7 @@ a:hover {
   }
 
   .card-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 0.33fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1.0fr));
   }
 }
 
