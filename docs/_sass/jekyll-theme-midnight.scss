@@ -260,7 +260,7 @@ a:hover {
   }
 
   .hero-image img {
-    width: 120px; /* smaller image for mobile */
+    width: 180px; /* smaller image for mobile */
     display: block; /* ensures margin auto works */
   }
 
@@ -359,6 +359,10 @@ a:hover {
 
   .section {
     padding: 3rem 1.25rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 0.33fr));
   }
 }
 
