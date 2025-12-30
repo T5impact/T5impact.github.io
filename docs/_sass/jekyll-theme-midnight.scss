@@ -255,13 +255,18 @@ a:hover {
     align-items: flex-start;
   }
 
+  .hero-image {
+    margin: 1rem auto 0; /* top margin + auto horizontal centering */
+  }
+
   .hero-image img {
-    width: 120px;
+    width: 120px; /* smaller image for mobile */
+    display: block; /* ensures margin auto works */
   }
 
   .site-header {
     background: 
-      linear-gradient(to bottom, rgba(18, 18, 18, 1) 35%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      linear-gradient(to bottom, rgba(18, 18, 18, 1) 50%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
       url("/images/BannerPicture.png") no-repeat fixed 50% 50%;
   }
 }
