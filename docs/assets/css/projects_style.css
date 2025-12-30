@@ -72,7 +72,7 @@ li {
 /* ===== Project Hero ===== */
 .project-hero {
   background: var(--bg-section-1);
-  border-bottom: 1px solid #172e18;
+  border-bottom: 3px solid #172e18;
   padding: 2rem 1.5rem;
 }
 
@@ -155,7 +155,7 @@ a:hover {
 /* ===== Footer ===== */
 .project-footer {
   background: var(--bg-section-1);
-  border-top: 1px solid #172e18;
+  border-top: 3px solid #172e18;
   padding: 2rem 1.5rem;
   text-align: center;
 }
