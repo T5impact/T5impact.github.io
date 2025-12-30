@@ -261,7 +261,7 @@ a:hover {
   }
 
   .hero-image img {
-    width: 180px; /* smaller image for mobile */
+    width: 220px; /* smaller image for mobile */
     display: block; /* ensures margin auto works */
   }
 
@@ -363,6 +363,7 @@ a:hover {
   }
 
   .card-grid {
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(260px, .85fr));
   }
 }
