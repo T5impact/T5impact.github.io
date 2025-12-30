@@ -209,6 +209,41 @@ a:hover {
   font-weight: 600;
 }
 
+
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.hero-image img {
+  width: 160px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Stack cleanly on mobile */
+@media (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-image img {
+    width: 120px;
+  }
+}
+
 /* =========================
    CARD GRID
    ========================= */
