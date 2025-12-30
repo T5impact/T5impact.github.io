@@ -366,6 +366,12 @@ a:hover {
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(260px, .85fr));
   }
+
+  .site-footer {
+    background: 
+      linear-gradient(to right, rgba(18, 18, 18, 1) 50%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      url("/images/BannerPicture2.png") no-repeat center/cover;
+  }
 }
 
 
