@@ -1,2 +1,7 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
 layout: pacs-revenge
-permalink: /projects/pacs-revenge.html
+permalink: /projects/pacs-revenge/
+---
