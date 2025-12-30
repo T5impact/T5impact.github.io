@@ -109,9 +109,9 @@ li {
   background: var(--bg-section-2);
 }
 
-.project-section:nth-of-type(odd) {
+/* .project-section:nth-of-type(odd) {
   background: var(--bg-base);
-}
+} */
 
 .project-section > * {
   max-width: var(--max-width);
