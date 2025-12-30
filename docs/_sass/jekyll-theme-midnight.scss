@@ -179,7 +179,7 @@ a:hover {
 
   /* Gradient overlay + background image */
   background: 
-    linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0) 70%), /* adjust rgba to your current hero color */
     url("/images/BannerPicture.png") no-repeat fixed 50% 50%;
 }
 
@@ -324,6 +324,11 @@ a:hover {
   text-align: center;
   font-size: 0.85rem;
   color: #819e80;
+
+  /* Gradient overlay + background image */
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0) 70%), /* adjust rgba to your current hero color */
+    url("/images/BannerPicture.png") no-repeat fixed 50% 50%;
 }
 
 /* =========================
