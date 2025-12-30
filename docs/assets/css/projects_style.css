@@ -1,1 +1,179 @@
+/* ===== Root Theme ===== */
+:root {
+  --bg-base: #121212;
+  --bg-section-1: #181818;
+  --bg-section-2: #1E1E1E;
 
+  --card-bg: #212121;
+  --border-subtle: #2A2A2A;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #CFCFCF;
+  --text-muted: #9E9E9E;
+
+  --accent-green: #4CAF50;
+  --accent-green-hover: #66BB6A;
+
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --max-width: 960px;
+}
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25em;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  color: var(--text-secondary);
+}
+
+/* ===== Project Hero ===== */
+.project-hero {
+  background: var(--bg-section-1);
+  padding: 3rem 1.5rem;
+}
+
+.project-hero > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.project-meta {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: var(--text-muted);
+}
+
+.project-meta strong {
+  color: var(--text-primary);
+}
+
+/* ===== Sections ===== */
+.project-section {
+  padding: 3rem 1.5rem;
+}
+
+.project-section:nth-of-type(even) {
+  background: var(--bg-section-2);
+}
+
+.project-section:nth-of-type(odd) {
+  background: var(--bg-base);
+}
+
+.project-section > * {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Media Grid ===== */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.media-grid video {
+  width: 100%;
+  border-radius: 6px;
+  background: #000;
+  border: 1px solid var(--border-subtle);
+}
+
+/* ===== Links & Buttons ===== */
+a {
+  color: var(--accent-green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-green-hover);
+  text-decoration: underline;
+}
+
+.external-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* ===== Footer ===== */
+.project-footer {
+  background: var(--bg-section-1);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.project-footer a {
+  color: var(--accent-green);
+  font-weight: 500;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
