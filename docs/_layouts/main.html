@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Luke Gamage – Gameplay / Systems Programmer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= Header / Hero ================= -->
+<header class="site-header">
+  <div class="hero">
+    <h1>Luke Gamage</h1>
+    <h2>Gameplay / Systems Programmer</h2>
+
+    <p class="hero-skills">
+      Unity (C#) · Gameplay Architecture · AI · Rendering
+    </p>
+
+    <p class="hero-summary">
+      I build scalable gameplay systems and rendering features with production-quality code.
+    </p>
+
+    <nav class="hero-links">
+      <a href="/assets/Luke_Gamage_Resume.pdf">Resume</a>
+      <a href="https://github.com/T5impact" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/luke-gamage-586550226/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= Featured Games ================= -->
+<section class="section">
+  <h2 class="section-title">Featured Games</h2>
+
+  <div class="card-grid">
+
+    <article class="card">
+      <img src="images/pacsrevenge.png" alt="Pac's Revenge screenshot">
+      <h3>Pac’s Revenge</h3>
+      <p class="card-role">Lead Gameplay Programmer</p>
+      <p class="card-desc">
+        Modular combat systems, enemy AI, progression pipelines, and custom post-processing shaders.
+      </p>
+      <a class="card-link" href="/projects/pacs-revenge.html">View project →</a>
+    </article>
+
+    <article class="card">
+      <img src="images/theeternalguest.png" alt="The Eternal Guest screenshot">
+      <h3>The Eternal Guest</h3>
+      <p class="card-role">Gameplay Programmer</p>
+      <p class="card-desc">
+        Modular combat architecture, boss AI, save systems, and inventory-driven ability design.
+      </p>
+      <a class="card-link" href="/projects/the-eternal-guest.html">View project →</a>
+    </article>
+
+    <article class="card">
+      <img src="images/webdiver.png" alt="W3B D1V3R screenshot">
+      <h3>W3B D1V3R</h3>
+      <p class="card-role">Systems Programmer</p>
+      <p class="card-desc">
+        Expandable weapon and upgrade systems built under tight production constraints.
+      </p>
+      <a class="card-link" href="/projects/w3b-d1v3r.html">View project →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= Technical & Systems Work ================= -->
+<section class="section section-alt">
+  <h2 class="section-title">Technical & Systems Work</h2>
+
+  <div class="card-grid">
+
+    <article class="card">
+      <img src="images/clouds.png" alt="Volumetric clouds rendering">
+      <h3>Volumetric Cloud Rendering</h3>
+      <p class="card-desc">
+        GPU raymarched clouds using tiled 3D Worley noise and single-pass post-processing.
+      </p>
+      <a class="card-link" href="/projects/volumetric-clouds.html">View project →</a>
+    </article>
+
+    <article class="card">
+      <img src="images/atmosphericscattering.png" alt="Atmospheric scattering">
+      <h3>Atmospheric Scattering</h3>
+      <p class="card-desc">
+        Optimized volumetric atmosphere rendering using precomputed optical depth textures.
+      </p>
+      <a class="card-link" href="/projects/atmospheric-scattering.html">View project →</a>
+    </article>
+
+    <article class="card">
+      <img src="images/octree.png" alt="Terrain generation">
+      <h3>GPU Terrain Generation</h3>
+      <p class="card-desc">
+        Cubical Marching Squares with GPU-driven octree LOD generation via compute shaders.
+      </p>
+      <a class="card-link" href="/projects/terrain-generation.html">View project →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <p>© {{ site.time | date: "%Y" }} Luke Gamage</p>
+</footer>
+
+</body>
+</html>
