@@ -71,8 +71,9 @@ li {
 
 /* ===== Project Hero ===== */
 .project-hero {
-  background: var(--bg-section-2);
-  padding: 3rem 1.5rem;
+  background: var(--bg-section-1);
+  border: 1px solid #172e18;
+  padding: 2rem 1.5rem;
 }
 
 .project-hero > * {
