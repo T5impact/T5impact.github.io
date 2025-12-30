@@ -71,7 +71,7 @@ li {
 
 /* ===== Project Hero ===== */
 .project-hero {
-  background: var(--bg-section-1);
+  background: var(--bg-section-2);
   padding: 3rem 1.5rem;
 }
 
@@ -103,11 +103,12 @@ li {
 /* ===== Sections ===== */
 .project-section {
   padding: 1.0rem 1.5rem;
-}
-
-.project-section:nth-of-type(even) {
   background: var(--bg-section-2);
 }
+
+/* .project-section:nth-of-type(even) {
+  background: var(--bg-section-2);
+} */
 
 /* .project-section:nth-of-type(odd) {
   background: var(--bg-base);
