@@ -175,7 +175,12 @@ a:hover {
 .site-header {
   padding: 4rem 1.5rem 3rem;
   border-bottom: 1px solid #222634;
-  background-color: #121212;
+  //background-color: rgb(18, 18, 18);
+
+  /* Gradient overlay + background image */
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    url('images/BannerPicture2.png') no-repeat center/cover;
 }
 
 .hero {
