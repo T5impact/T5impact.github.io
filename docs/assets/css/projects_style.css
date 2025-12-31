@@ -149,7 +149,7 @@ li {
 
   background: 
     linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
-    url("/imagescake.png") no-repeat fixed 25% 25%;
+    url("/images/cake_gameplay1.png") no-repeat fixed 25% 25%;
 }
 .project-hero-c h1 {
   color: #dedede;
@@ -282,6 +282,6 @@ a:hover {
   .project-hero-c {
     background: 
       linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
-      url("/images/cake.png") no-repeat center/cover;
+      url("/images/cake_gameplay1.png") no-repeat center/cover;
   }
 }
