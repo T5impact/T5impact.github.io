@@ -205,11 +205,14 @@ a:hover {
     gap: 0.5rem;
   }
 
-  .project-hero {
-
-
+  .project-hero-pr {
     background: 
       linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
       url("/images/pacsrevenge.png") no-repeat center/cover;
+  }
+  .project-hero-teg {
+    background: 
+      linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      url("/images/theeternalguest.png") no-repeat center/cover;
   }
 }
