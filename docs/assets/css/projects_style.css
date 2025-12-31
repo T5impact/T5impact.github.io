@@ -76,7 +76,7 @@ li {
   padding: 2rem 1.5rem;
 
     background: 
-      linear-gradient(to right, rgba(18, 18, 18, 1) 35%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      linear-gradient(to right, rgba(18, 18, 18, 1) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
       url("/images/pacsrevenge.png") no-repeat fixed 50% 50%;
 }
 
