@@ -98,7 +98,12 @@ li {
   color: #ecc434;
 }
 
-.project-hero > * {
+.project-hero-pr > * {
+  max-width: var(--max-width);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.project-hero-teg > * {
   max-width: var(--max-width);
   margin-left: 10%;
   margin-right: 10%;
