@@ -82,6 +82,11 @@ li {
 .project-hero-pr h1 {
   color: #ecc434;
 }
+.project-hero-pr > * {
+  max-width: var(--max-width);
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 .project-hero-teg {
   background: var(--bg-section-1);
@@ -95,17 +100,30 @@ li {
 .project-hero-teg h1 {
   color: #ecc434;
 }
-
-.project-hero-pr > * {
-  max-width: var(--max-width);
-  margin-left: 10%;
-  margin-right: 10%;
-}
 .project-hero-teg > * {
   max-width: var(--max-width);
   margin-left: 10%;
   margin-right: 10%;
 }
+
+.project-hero-wd {
+  background: var(--bg-section-1);
+  border-bottom: 3px solid #172e18;
+  padding: 2rem 1.5rem;
+
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    url("/images/webdiver.png") no-repeat fixed 25% 25%;
+}
+.project-hero-wd h1 {
+  color: #b3e2e3;
+}
+.project-hero-wd > * {
+  max-width: var(--max-width);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 .project-subtitle {
   color: var(--text-muted);
