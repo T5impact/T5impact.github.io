@@ -70,7 +70,7 @@ li {
 }
 
 /* ===== Project Hero ===== */
-.project-hero {
+.project-hero-pr {
   background: var(--bg-section-1);
   border-bottom: 3px solid #172e18;
   padding: 2rem 1.5rem;
@@ -80,7 +80,21 @@ li {
     url("/images/pacsrevenge.png") no-repeat fixed 50% 50%;
 }
 
-.project-hero h1 {
+.project-hero-pr h1 {
+  color: #ecc434;
+}
+
+.project-hero-teg {
+  background: var(--bg-section-1);
+  border-bottom: 3px solid #172e18;
+  padding: 2rem 1.5rem;
+
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    url("/images/theeternalguest.png") no-repeat fixed 50% 50%;
+}
+
+.project-hero-teg h1 {
   color: #ecc434;
 }
 
