@@ -80,6 +80,10 @@ li {
     url("/images/pacsrevenge.png") no-repeat fixed 50% 50%;
 }
 
+.project-hero h1 {
+  color: #ecc434;
+}
+
 .project-hero > * {
   max-width: var(--max-width);
   margin-left: 10%;
