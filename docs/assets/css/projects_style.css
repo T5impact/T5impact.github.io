@@ -75,9 +75,9 @@ li {
   border-bottom: 3px solid #172e18;
   padding: 2rem 1.5rem;
 
-    background: 
-      linear-gradient(to right, rgba(18, 18, 18, 1) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
-      url("/images/pacsrevenge.png") no-repeat fixed 50% 50%;
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 1) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    url("/images/pacsrevenge.png") no-repeat fixed 50% 50%;
 }
 
 .project-hero > * {
@@ -182,5 +182,13 @@ a:hover {
   .project-meta {
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .project-hero {
+
+
+    background: 
+      linear-gradient(to right, rgba(18, 18, 18, 1) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      url("/images/pacsrevenge.png") no-repeat center/cover;
   }
 }
