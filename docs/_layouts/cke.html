@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>CKE | Luke Gamage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/projects_style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Six+Caps&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== Project Header ===== -->
+  <header class="project-hero">
+    <h1>CKE</h1>
+    <p class="project-subtitle">
+      Technical Artist / Gameplay Programmer — 48-Hour Game Jam
+    </p>
+
+    <ul class="project-meta">
+      <li><strong>Duration:</strong> 48-hour Game Jam</li>
+      <li><strong>Team:</strong> 4 developers</li>
+      <li><strong>Engine:</strong> Unity (C#, HLSL)</li>
+      <li><strong>Platforms:</strong> PC (Itch)</li>
+      <li><strong>Theme:</strong> Contradiction</li>
+    </ul>
+  </header>
+
+  <!-- ===== Overview ===== -->
+  <section class="project-section">
+    <h2>Overview</h2>
+    <p>
+      CKE is a top-down gliding puzzle game inspired by the clean, clinical
+      aesthetic of Portal. The player simultaneously controls two mirrored
+      versions of the same character across separate maps, with one character’s
+      controls inverted.
+    </p>
+    <p>
+      To complete a level, the player must guide both characters to their exits
+      while collecting all cakes on one map and actively avoiding cakes on the
+      other—an intentional mechanical contradiction.
+    </p>
+  </section>
+
+  <!-- ===== Core Mechanics ===== -->
+  <section class="project-section">
+    <h2>Core Mechanics</h2>
+    <ul>
+      <li>Dual-character control with inverted input mapping</li>
+      <li>Top-down gliding movement with momentum-based steering</li>
+      <li>Asymmetric objectives across synchronized levels</li>
+      <li>Precision-focused puzzle design built around contradiction</li>
+    </ul>
+  </section>
+
+  <!-- ===== Art Direction & Shaders ===== -->
+  <section class="project-section">
+    <h2>Art Direction & Technical Art</h2>
+    <p>
+      I was responsible for all visual development, including art direction,
+      asset creation, and shader implementation. The goal was to achieve a
+      Portal-inspired visual language while remaining readable in a top-down
+      puzzle context.
+    </p>
+
+    <ul>
+      <li>Designed and implemented multiple custom shaders under 48-hour constraints</li>
+      <li>Created stylized surface shaders for floors, walls, and interactables</li>
+      <li>Built emissive and outline effects to guide player attention</li>
+      <li>Balanced visual clarity against aesthetic cohesion during rapid iteration</li>
+    </ul>
+  </section>
+
+  <!-- ===== Level Progression ===== -->
+  <section class="project-section">
+    <h2>Level Progression</h2>
+    <p>
+      I designed the level progression to introduce mechanics incrementally,
+      allowing players to internalize the contradiction-based ruleset without
+      explicit tutorialization.
+    </p>
+
+    <ul>
+      <li>Early levels focus on mirrored movement comprehension</li>
+      <li>Mid-game levels introduce cake collection vs. avoidance tension</li>
+      <li>Later levels combine tight navigation with visual misdirection</li>
+    </ul>
+  </section>
+
+  <!-- ===== Media ===== -->
+  <!-- <section class="project-section">
+    <h2>Gameplay & Visuals</h2>
+
+    <div class="media-grid">
+      <video controls>
+        <source src="/video/cake_gameplay1" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="/video/CKEShaders.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section> -->
+
+  <!-- ===== Theme Interpretation ===== -->
+  <!-- <section class="project-section">
+    <h2>Theme Interpretation</h2>
+    <p>
+      The narrative framing centers on an AI attempting to prove the contradiction
+      of “you can eat your cake and have it too.” This idea is embedded directly
+      into the mechanics, requiring the player to simultaneously pursue and
+      reject the same objective.
+    </p>
+  </section> -->
+
+  <!-- ===== Learnings ===== -->
+  <section class="project-section">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Strong visual direction can be achieved through shader iteration alone</li>
+      <li>Technical art decisions must prioritize readability under time pressure</li>
+      <li>Mechanics and narrative are most effective when inseparable</li>
+    </ul>
+  </section>
+
+  <!-- ===== Navigation ===== -->
+  <footer class="project-footer">
+    <a href="https://t5impact.github.io/">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
