@@ -142,6 +142,24 @@ li {
   margin-right: 10%;
 }
 
+.project-hero-c {
+  background: var(--bg-section-1);
+  border-bottom: 3px solid #172e18;
+  padding: 2rem 1.5rem;
+
+  background: 
+    linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+    url("/imagescake.png") no-repeat fixed 25% 25%;
+}
+.project-hero-c h1 {
+  color: #dedede;
+}
+.project-hero-c > * {
+  max-width: var(--max-width);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 
 .project-subtitle {
   color: var(--text-muted);
@@ -255,5 +273,15 @@ a:hover {
     background: 
       linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
       url("/images/webdiver.png") no-repeat center/cover;
+  }
+  .project-hero-h {
+    background: 
+      linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      url("/images/hardy.png") no-repeat center/cover;
+  }
+  .project-hero-c {
+    background: 
+      linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
+      url("/images/cake.png") no-repeat center/cover;
   }
 }
