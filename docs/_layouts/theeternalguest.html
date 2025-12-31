@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>The Eternal Guest | Luke Gamage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/projects_style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Six+Caps&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== Project Header ===== -->
+  <header class="project-hero">
+    <h1>The Eternal Guest</h1>
+    <p class="project-subtitle">
+      Gameplay & Systems Programmer
+    </p>
+
+    <ul class="project-meta">
+      <li><strong>Duration:</strong> 2022 – 2023</li>
+      <li><strong>Team:</strong> 5 developers</li>
+      <li><strong>Engine:</strong> Unity (C#)</li>
+      <li><strong>Platforms:</strong> PC (Itch)</li>
+    </ul>
+
+    <a class="external-link"
+       href="https://t5-impact.itch.io/the-eternal-guest"
+       target="_blank"
+       rel="noopener noreferrer">
+      View Game on Itch →
+    </a>
+  </header>
+
+  <!-- ===== Project Overview ===== -->
+  <section class="project-section">
+    <h2>Overview</h2>
+    <p>
+      The Eternal Guest is a narrative-driven psychological horror game focused
+      on environmental storytelling, player-driven pacing, and systemic tension.
+      I worked as the primary gameplay programmer, owning interaction systems,
+      progression logic, and core architectural decisions.
+    </p>
+  </section>
+
+  <!-- ===== Responsibilities ===== -->
+  <section class="project-section">
+    <h2>My Responsibilities</h2>
+    <ul>
+      <li>Designed and implemented core interaction and examination systems</li>
+      <li>Built event-driven gameplay systems to support narrative pacing</li>
+      <li>Developed save/load and progression tracking systems</li>
+      <li>Collaborated closely with design and narrative to support iteration</li>
+      <li>Maintained clean system boundaries to avoid narrative hard-coupling</li>
+    </ul>
+  </section>
+
+  <!-- ===== Key Systems ===== -->
+  <section class="project-section">
+    <h2>Key Gameplay Systems</h2>
+
+    <h3>Interaction & Examination System</h3>
+    <p>
+      Player interactions were implemented using a component-driven architecture
+      that allowed designers to author interactive objects without custom code,
+      supporting rapid iteration and content expansion.
+    </p>
+
+    <h3>Event-Driven Narrative Triggers</h3>
+    <p>
+      Narrative progression relied on decoupled event triggers and state flags
+      rather than linear scripting, allowing scenes to react dynamically to
+      player behavior and exploration order.
+    </p>
+
+    <h3>Save / Load & State Persistence</h3>
+    <p>
+      Implemented a lightweight serialization system to persist world state,
+      player progress, and narrative flags across sessions without introducing
+      brittle dependencies between systems.
+    </p>
+  </section>
+
+  <!-- ===== Technical Challenges ===== -->
+  <section class="project-section">
+    <h2>Technical Challenges & Solutions</h2>
+    <ul>
+      <li>
+        Prevented narrative logic from becoming tightly coupled to level scripts
+        by centralizing state evaluation and progression rules.
+      </li>
+      <li>
+        Balanced flexibility and control in the interaction system to avoid
+        designer-created edge cases that could break progression.
+      </li>
+      <li>
+        Optimized scene loading and memory usage to reduce hitching during
+        exploration-heavy gameplay.
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Media ===== -->
+  <section class="project-section">
+    <h2>Gameplay Footage</h2>
+
+    <div class="media-grid">
+      <video controls>
+        <source src="/video/EternalGuestExploration.mp4" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="/video/EternalGuestInteraction.mp4" type="video/mp4">
+      </video>
+
+      <video controls>
+        <source src="/video/EternalGuestSequence.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- ===== Code Samples ===== -->
+  <section class="project-section">
+    <h2>Code Samples</h2>
+    <p>
+      Selected excerpts highlighting interaction architecture, event-driven
+      gameplay flow, and state persistence patterns.
+    </p>
+
+    <a class="external-link"
+       href="https://github.com/T5impact/EternalGuestCodeSamples"
+       target="_blank"
+       rel="noopener noreferrer">
+      View Code Samples on GitHub →
+    </a>
+  </section>
+
+  <!-- ===== Learnings ===== -->
+  <section class="project-section">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Event-driven systems scale better than linear scripting for narrative games</li>
+      <li>Clear ownership of game state prevents progression-breaking bugs</li>
+      <li>Systems must support pacing as much as mechanics in narrative titles</li>
+    </ul>
+  </section>
+
+  <!-- ===== Navigation ===== -->
+  <footer class="project-footer">
+    <a href="/index.html">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
