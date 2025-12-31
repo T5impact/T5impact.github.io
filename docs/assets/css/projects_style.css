@@ -237,5 +237,5 @@ a:hover {
     background: 
       linear-gradient(to right, rgba(18, 18, 18, 0.9) 45%, rgba(18, 18, 18, 0) 100%), /* adjust rgba to your current hero color */
       url("/images/webdiver.png") no-repeat center/cover;
-}
+  }
 }
