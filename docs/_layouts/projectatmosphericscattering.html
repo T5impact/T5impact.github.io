@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Pac's Revenge | Luke Gamage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/projects_style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Six+Caps&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ===== Project Header ===== -->
+  <header class="project-hero">
+    <h1>GPU Terrain Generation</h1>
+    <p class="project-subtitle">
+      Systems / Graphics Programming Experiment
+    </p>
+
+    <ul class="project-meta">
+      <li><strong>Languages:</strong> C#, HLSL</li>
+      <li><strong>Tech:</strong> Unity, Compute Shaders</li>
+      <li><strong>Focus:</strong> GPU Parallelism, LOD, Data Structures</li>
+    </ul>
+  </header>
+
+  <!-- ===== Overview ===== -->
+  <section class="project-section">
+    <h2>Overview</h2>
+    <p>
+      This project explores real-time terrain generation using the
+      Cubical Marching Squares (CMS) algorithm sampled from a dynamically
+      generated Octree. The entire pipeline—data generation, spatial
+      subdivision, and mesh construction—runs in parallel on the GPU.
+    </p>
+  </section>
+
+  <!-- ===== Problem Statement ===== -->
+  <section class="project-section">
+    <h2>Problem Statement</h2>
+    <p>
+      Traditional Marching Cubes struggles with sharp feature preservation
+      and does not integrate cleanly with variable level-of-detail systems.
+      Additionally, recursive spatial data structures such as Octrees are
+      inherently difficult to generate efficiently in a parallel GPU context.
+    </p>
+    <p>
+      The goal of this project was to design a GPU-friendly terrain pipeline
+      that supports adaptive LOD while preserving surface features and
+      remaining performant.
+    </p>
+  </section>
+
+  <!-- ===== High-Level Architecture ===== -->
+  <section class="project-section">
+    <h2>High-Level Architecture</h2>
+    <ul>
+      <li>Generate Hermite density and normal data using layered 3D noise</li>
+      <li>Construct an Octree entirely on the GPU via compute shaders</li>
+      <li>Store Octree data in a 3D texture for random-access sampling</li>
+      <li>Apply Cubical Marching Squares to generate mesh geometry</li>
+    </ul>
+  </section>
+
+  <!-- ===== Octree Generation ===== -->
+  <section class="project-section">
+    <h2>Parallel Octree Generation</h2>
+    <p>
+      Because recursive subdivision introduces race conditions in parallel
+      environments, the Octree is generated in reverse: starting at maximum
+      subdivision and progressively un-subdividing nodes.
+    </p>
+
+    <ul>
+      <li>Octree construction implemented entirely on the GPU</li>
+      <li>Custom node metadata generated using parallel merge-style passes</li>
+      <li>Local GPU memory used to minimize synchronization overhead</li>
+      <li>Efficiency decreases as nodes are un-subdivided, a known tradeoff</li>
+    </ul>
+  </section>
+
+  <!-- ===== CMS Algorithm ===== -->
+  <section class="project-section">
+    <h2>Cubical Marching Squares</h2>
+    <p>
+      CMS decomposes the 3D meshing problem into six 2D Marching Squares passes
+      per cube, allowing improved feature preservation and compatibility with
+      variable LOD.
+    </p>
+
+    <ul>
+      <li>Preserves sharp surface features better than Marching Cubes</li>
+      <li>Enables integration with adaptive Octree subdivision</li>
+      <li>Transition faces between LODs present the primary complexity</li>
+    </ul>
+  </section>
+
+  <!-- ===== Technical Challenges ===== -->
+  <section class="project-section">
+    <h2>Technical Challenges</h2>
+    <ul>
+      <li>
+        Resolving transition faces between neighboring Octree nodes of
+        differing subdivision levels
+      </li>
+      <li>
+        Preventing non-manifold geometry during mesh regeneration
+      </li>
+      <li>
+        Balancing GPU parallelism against memory coherence and access patterns
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Performance Considerations ===== -->
+  <section class="project-section">
+    <h2>Performance Considerations</h2>
+    <ul>
+      <li>All major stages execute on the GPU to minimize CPU-GPU transfers</li>
+      <li>Octree data stored in a 3D texture for cache-friendly access</li>
+      <li>Parallel execution maximized during initial subdivision stages</li>
+      <li>Known inefficiencies emerge during late-stage un-subdivision</li>
+    </ul>
+  </section>
+
+  <!-- ===== Results & Limitations ===== -->
+  <section class="project-section">
+    <h2>Results & Limitations</h2>
+    <p>
+      The system successfully generates airtight meshes with variable LOD on
+      initial execution. However, repeated regeneration can introduce holes
+      at LOD transition boundaries, indicating unresolved edge cases in the
+      transition-face logic.
+    </p>
+  </section>
+
+  <!-- ===== Learnings & Future Work ===== -->
+  <section class="project-section">
+    <h2>Learnings & Future Work</h2>
+    <ul>
+      <li>Recursive data structures require non-intuitive approaches on GPU</li>
+      <li>CMS offers significant advantages for LOD-compatible meshing</li>
+      <li>Future work includes planet-scale terrain and streaming</li>
+      <li>Exploration of advanced noise models and voxel-based fluid systems</li>
+    </ul>
+  </section>
+
+  <!-- ===== Deep Dive ===== -->
+  <section class="project-section">
+    <h2>Further Reading</h2>
+    <p>
+      A detailed breakdown of the algorithm design, implementation challenges,
+      and iteration process is available in the full article below.
+    </p>
+    <a href="https://t5impact.github.io/post/terraingeneration">Read the full technical article →</a>
+  </section>
+
+  <!-- ===== Navigation ===== -->
+  <footer class="project-footer">
+    <a href="https://t5impact.github.io/">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
