@@ -21,99 +21,86 @@
     <header class="project-hero">
         <h1>Atmospheric Scattering Shader</h1>
         <p class="project-subtitle">
-        High-performance volumetric atmospheric rendering using raymarching and optical depth precomputation.
+            Systems / Graphics Programming Project
         </p>
 
-        <div class="project-meta">
-        <span><strong>Languages:</strong> C#, HLSL</span>
-        <span><strong>Focus:</strong> Rendering, Shaders, GPU Optimization</span>
-        </div>
+        <ul class="project-meta">
+            <li><strong>Languages:</strong> C#, HLSL</li>
+            <li><strong>Tech:</strong> Unity, Compute Shaders</li>
+            <li><strong>Focus:</strong> Rendering, Shaders, GPU Optimization</li>
+        </ul>
+
+        <a class="external-link"
+        href="https://github.com/T5impact/Atmospheric-Scattering-Shader"
+        target="_blank"
+        rel="noopener noreferrer">
+        View Github Page →
+        </a>
+
     </header>
 
     <!-- Overview -->
-    <section class="project-section">
-        <h2>Project Overview</h2>
-        <p>
-        An atmospheric scattering shader simulates the physical behavior of light as it interacts with a planet’s atmosphere.
-        I developed this shader both as a deep dive into advanced shader programming and as a foundational system for a
-        larger long-term project involving realistic planetary rendering.
-        </p>
-    </section>
+  <section class="project-section">
+    <div class="container">
+      <h2>Overview</h2>
+      <p>
+        This project explores the implementation of a physically inspired atmospheric scattering shader
+        designed for real-time applications. The shader simulates Rayleigh and Mie scattering using
+        volumetric raymarching, with performance optimizations that make it suitable for planetary-scale scenes.
+      </p>
+    </div>
+  </section>
 
-    <!-- Scientific Background -->
-    <section class="project-section">
-        <h2>Physical Basis of Atmospheric Scattering</h2>
-        <p>
-        Planetary atmospheres derive their appearance from how light scatters across different wavelengths.
-        This shader models two primary scattering phenomena: Rayleigh scattering and Mie scattering.
-        </p>
-        <p>
-        Rayleigh scattering occurs when light interacts with very small particles in the atmosphere and is primarily
-        responsible for an atmosphere’s color composition. Mie scattering, by contrast, occurs with larger particles
-        and produces more uniform wavelength scattering, contributing to brightness and glow around light sources.
-        </p>
-        <p>
-        The physical composition of an atmosphere determines how quickly different wavelengths scatter.
-        In Earth’s case, shorter blue wavelengths scatter first, resulting in blue skies during the day and
-        red hues during sunrise and sunset when light travels through more atmospheric volume.
-        </p>
-    </section>
+  <!-- Physical Background -->
+  <section class="project-section alt-bg">
+    <div class="container">
+      <h2>Scattering Fundamentals</h2>
+      <p>
+        Atmospheric appearance is driven by how light scatters through particles in the air.
+        Rayleigh scattering affects wavelength-dependent color, while Mie scattering contributes
+        to brightness and glow around light sources. By controlling scattering coefficients directly,
+        the shader balances physical plausibility with artistic control.
+      </p>
+    </div>
+  </section>
 
-    <!-- Shader Implementation -->
-    <section class="project-section">
-        <h2>Shader Implementation</h2>
-        <p>
-        Simulating light scattering at a physically accurate level is computationally expensive and unsuitable
-        for real-time rendering if approached naively. Rather than simulating every ray emitted by a light source,
-        this shader works backwards by evaluating only the light that reaches the camera.
-        </p>
-        <p>
-        The core of the shader is a volumetric raymarcher that samples an inverse exponential density function
-        to approximate atmospheric density. The scattering calculations involve nested numerical integrations,
-        which are approximated using a fixed number of steps to balance visual quality and performance.
-        </p>
-        <p>
-        To maintain creative flexibility, scattering coefficients are supplied directly to the shader.
-        This allows for stylized or exaggerated atmospheres without relying strictly on physically derived values.
-        </p>
-    </section>
+  <!-- Shader Implementation -->
+  <section class="project-section">
+    <div class="container">
+      <h2>Shader Implementation</h2>
+      <p>
+        The shader evaluates atmospheric scattering by raymarching along the camera’s view direction,
+        approximating otherwise expensive nested integrals with a finite number of samples.
+        This approach focuses computation only on light that actually reaches the camera,
+        making real-time execution feasible.
+      </p>
+    </div>
+  </section>
 
-    <!-- Optimization -->
-    <section class="project-section">
-        <h2>Performance Optimization</h2>
-        <p>
-        Nested loops are particularly expensive in shader code, especially in volumetric effects.
-        To reduce computational cost, this implementation leverages a precomputed Optical Depth texture.
-        </p>
-        <p>
-        The Optical Depth texture stores pre-evaluated light attenuation values based on altitude and angle
-        relative to the light source. By sampling this texture during raymarching, the shader avoids redundant
-        calculations and significantly improves runtime performance.
-        </p>
-        <p>
-        This optimization enables the shader to run in real time and makes it viable for use in interactive
-        applications such as games or simulations.
-        </p>
-    </section>
+  <!-- Performance & Optimization -->
+  <section class="project-section alt-bg">
+    <div class="container">
+      <h2>Performance Optimization</h2>
+      <p>
+        To eliminate costly nested loops, the shader leverages a precomputed optical depth texture.
+        This texture encodes light attenuation based on altitude and sun angle, allowing the shader
+        to replace repeated calculations with efficient texture lookups and achieve significant
+        performance gains.
+      </p>
+    </div>
+  </section>
 
-    <!-- Future Work -->
-    <section class="project-section">
-        <h2>Future Directions</h2>
-        <p>
-        While the current implementation is performant, there are several avenues for further optimization.
-        One planned improvement is rendering the atmospheric effect at a reduced resolution and upscaling
-        it to full screen, reducing cost while preserving visual fidelity.
-        </p>
-        <p>
-        Another major goal is integrating this system with a volumetric cloud shader.
-        Both effects share similar scattering and sampling techniques, and consolidating them into a single
-        unified system could significantly reduce overall rendering cost.
-        </p>
-        <p>
-        Additional experimentation includes using the shader’s output as input to post-processing effects
-        to achieve more stylized or artistic atmospheric visuals.
-        </p>
-    </section>
+  <!-- Future Work -->
+  <section class="project-section">
+    <div class="container">
+      <h2>Future Work</h2>
+      <p>
+        Planned improvements include rendering the effect at reduced resolution with upscaling,
+        further optimizing performance. Additional goals involve integrating volumetric cloud rendering
+        and exploring stylized post-processing effects built on top of the scattering results.
+      </p>
+    </div>
+  </section>
 
     <!-- ===== Deep Dive ===== -->
   <section class="project-section">
