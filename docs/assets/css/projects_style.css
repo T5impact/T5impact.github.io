@@ -76,7 +76,7 @@ li {
   padding: 2rem 1.5rem;
 }
 .project-hero h1 {
-  color: #ecc434;
+  color: #caeec0;
 }
 .project-hero > * {
   max-width: var(--max-width);
