@@ -328,6 +328,41 @@ a:hover {
   align-self: flex-start;
 }
 
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0.6rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Platform tags */
+.tag.platform {
+  background-color: rgba(120, 120, 120, 0.15);
+  color: #d0d0d0;
+}
+
+/* Tech tags */
+.tag.tech {
+  background-color: rgba(70, 160, 120, 0.18);
+  color: #9fe0c2;
+}
+
+/* Release / status tags */
+.tag.release {
+  background-color: rgba(90, 140, 220, 0.18);
+  color: #b6ccff;
+}
+
 /* =========================
    FOOTER
    ========================= */
