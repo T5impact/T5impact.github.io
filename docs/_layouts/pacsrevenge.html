@@ -44,67 +44,103 @@
   <section class="project-section">
     <h2>Overview</h2>
     <p>
-      Pac’s Revenge is a retro-inspired first-person shooter developed over
-      two years and released on Steam. I served as the team lead and primary
-      gameplay programmer, owning core combat systems, enemy AI, progression,
-      and custom rendering features.
+      Pac’s Revenge is a retro-inspired first-person shooter designed to evoke 
+      the feel of classic 90s FPS titles while supporting modern gameplay systems. 
+      The project emphasized extensibility, custom AI behavior, and a performance-conscious 
+      rendering pipeline to support a stylized aesthetic without heavy runtime cost.
+
+      I served as lead programmer, owning core gameplay systems, enemy AI, combat architecture, 
+      boss design, and the project’s retro visual pipeline. I also created all visual assets for the game.
     </p>
   </section>
 
   <!-- ===== Responsibilities ===== -->
   <section class="project-section">
-    <h2>My Responsibilities</h2>
+    <h2>My Role & Ownership</h2>
+    <p>Primary Responsibilities</p>
     <ul>
-      <li>Designed and implemented modular combat and weapon systems</li>
-      <li>Built enemy AI using state-based and rule-driven behaviors</li>
-      <li>Developed player progression, inventory, and stat systems</li>
-      <li>Created custom post-processing and full-screen shaders (HLSL)</li>
-      <li>Led technical decision-making and code architecture</li>
+      <li>Lead programmer responsible for core gameplay architecture</li>
+      <li>Designed and implemented enemy AI navigation and behaviors</li>
+      <li>Architected and refactored the modular combat and weapon systems</li>
+      <li>Designed and implemented the final boss AI encounter</li>
+      <li>Technical artist responsible for retro visual presentation</li>
+      <li>Created all 2D and 3D art assets</li>
     </ul>
   </section>
 
   <!-- ===== Key Systems ===== -->
   <section class="project-section">
-    <h2>Key Gameplay Systems</h2>
+    <h2>Key Systems I Built</h2>
 
-    <h3>Combat & Weapon Architecture</h3>
-    <p>
-      Weapons were implemented using an abstract base class and data-driven
-      configuration, allowing new weapons to be added without modifying
-      existing combat logic.
-    </p>
+    <h3>Grid-Based Level Representation</h3>
+    <ul>
+      <li>Procedurally generated a 2D grid representation of each level at runtime</li>
+      <li>Derived grid data from 3D wall and object placement</li>
+      <li>Served as the foundation for AI navigation and enemy behavior constraints</li>
+    </ul>
 
-    <h3>Enemy AI</h3>
-    <p>
-      Enemy behaviors were structured as modular state machines with shared
-      perception and decision logic, enabling reuse across enemy types while
-      supporting unique behavior patterns.
-    </p>
+    <h3>Enemy AI Navigation System</h3>
+    <ul>
+      <li>Implemented a custom A* pathfinding solution operating on the grid-level map</li>
+      <li>Supported directional restrictions and configurable step limits</li>
+      <li>Enabled differentiated enemy behaviors using shared navigation logic</li>
+    </ul>
 
-    <h3>Progression & Player Stats</h3>
-    <p>
-      Player progression and stat scaling were implemented as isolated systems
-      to avoid hard dependencies on combat logic, reducing coupling and easing
-      iteration during balance passes.
-    </p>
+    <h3>Modular Combat & Weapon Framework</h3>
+    <ul>
+      <li>Designed a polymorphic weapon architecture to support future content expansion</li>
+      <li>Refactored an initially hardcoded single-weapon system into a flexible framework</li>
+      <li>Allowed the player controller to interface with any weapon without rewrites</li>
+    </ul>
+
+    <h3>Weapon Implementations</h3>
+    <ul>
+      <li>Programmed the majority of weapon behaviors and interactions</li>
+      <li>Leveraged shared interfaces while preserving weapon-specific logic</li>
+    </ul>
+
+    <h3>Final Boss AI State Machine</h3>
+    <ul>
+      <li>Designed and implemented a multi-phase boss encounter</li>
+      <li>Used a custom state machine to support dynamic behavior changes</li>
+      <li>Integrated player feedback and phase transitions for pacing and challenge</li>
+    </ul>
+
+    <h3>Retro-Style Shader Pipeline</h3>
+    <ul>
+      <li>Built multiple shaders in HLSL to emulate a retro visual aesthetic</li>
+      <li>Implemented custom fog and post-processing effects with stepped opacity</li>
+      <li>Replaced Unity’s internal lighting model with lightweight post-processing to reduce render cost</li>
+    </ul>
   </section>
 
   <!-- ===== Technical Challenges ===== -->
   <section class="project-section">
-    <h2>Technical Challenges & Solutions</h2>
+    <h2>Technical Challenges & Decisions</h2>
+    <h3>Refactoring the Combat System for Scalability</h3>
+    <p>
+      The project was initially scoped around a single weapon. As the design evolved, the hardcoded 
+      approach became a bottleneck. I led a refactor using polymorphism and shared interfaces, allowing 
+      new weapons to be added without modifying player or combat controller logic. This significantly 
+      improved maintainability and supported future content expansion.
+    </p>
+
+    <h3>Performance-Conscious Retro Rendering</h3>
+    <p>
+      Rather than relying on traditional real-time lighting, I replaced the lighting model with custom 
+      post-processing shaders that achieved the desired retro look at a fraction of the cost. This approach 
+      improved performance while maintaining consistent visual style across environments.
+    </p>
+
+  </section>
+
+    <!-- ===== Learnings ===== -->
+  <section class="project-section">
+    <h2>Results & Outcome</h2>
     <ul>
-      <li>
-        Refactored allocation-heavy gameplay loops to eliminate GC spikes
-        during combat encounters.
-      </li>
-      <li>
-        Optimized AI update frequency and perception checks to maintain stable
-        frame rates with multiple active enemies.
-      </li>
-      <li>
-        Built custom post-processing shaders to achieve a retro aesthetic
-        while minimizing render cost.
-      </li>
+      <li>Released on Steam to a small audience</li>
+      <li>Received positive player feedback despite limited marketing</li>
+      <li>Fully playable and shipped product demonstrating long-term development, iteration, and scope management</li>
     </ul>
   </section>
 
@@ -141,16 +177,6 @@
        rel="noopener noreferrer">
       View Code Samples on GitHub →
     </a>
-  </section>
-
-  <!-- ===== Learnings ===== -->
-  <section class="project-section">
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>Designing systems for iteration early prevented late-stage rewrites</li>
-      <li>Clear system boundaries reduced bugs during content expansion</li>
-      <li>Performance considerations must be addressed continuously, not late</li>
-    </ul>
   </section>
 
   <!-- ===== Navigation ===== -->
