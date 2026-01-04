@@ -70,6 +70,20 @@ li {
 }
 
 /* ===== Project Hero ===== */
+.project-hero {
+  background: var(--bg-section-1);
+  border-bottom: 3px solid #172e18;
+  padding: 2rem 1.5rem;
+}
+.project-hero h1 {
+  color: #ecc434;
+}
+.project-hero > * {
+  max-width: var(--max-width);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .project-hero-pr {
   background: var(--bg-section-1);
   border-bottom: 3px solid #172e18;
@@ -182,7 +196,7 @@ li {
 
 /* ===== Sections ===== */
 .project-section {
-  padding: 1.0rem 1.5rem;
+  padding: 1.0rem 1.0rem;
   background: var(--bg-section-2);
 }
 
