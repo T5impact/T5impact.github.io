@@ -43,67 +43,130 @@
   <section class="project-section">
     <h2>Overview</h2>
     <p>
-      The Eternal Guest is a narrative-driven psychological horror game focused
-      on environmental storytelling, player-driven pacing, and systemic tension.
-      I worked as the primary gameplay programmer, owning interaction systems,
-      progression logic, and core architectural decisions.
+      The Eternal Guest is a narrative-driven exploration game set within a mysterious 
+      hotel where rooms shift and reconfigure over time. The project focused heavily on modular 
+      player systems, systemic progression, and tightly integrated combat, inventory, and ability 
+      frameworks that could support a wide variety of playstyles.
+    </p>
+    <p>
+      I served as the primary gameplay programmer and team lead, owning the majority of player-facing 
+      systems, enemy and boss AI behavior, and multiple core refactors driven by playtesting feedback. 
+      I also contributed significantly to the game’s visual presentation through custom shaders, VFX, and UI design.
     </p>
   </section>
 
   <!-- ===== Responsibilities ===== -->
   <section class="project-section">
-    <h2>My Responsibilities</h2>
+    <h2>My Role & Ownership</h2>
+    <h3>Primary Responsibilities</h3>
     <ul>
-      <li>Designed and implemented core interaction and examination systems</li>
-      <li>Built event-driven gameplay systems to support narrative pacing</li>
-      <li>Developed save/load and progression tracking systems</li>
-      <li>Collaborated closely with design and narrative to support iteration</li>
-      <li>Maintained clean system boundaries to avoid narrative hard-coupling</li>
+      <li>Primary gameplay programmer responsible for player systems and progression</li>
+      <li>Designed and implemented inventory, combat, ability, and item architectures</li>
+      <li>Refactored the randomized exploration system based on playtest feedback</li>
+      <li>Designed and implemented base enemy navigation and all boss AI encounters</li>
+      <li>Integrated gameplay systems with save/load functionality</li>
+      <li>Created approximately half of the game’s art assets</li>
+      <li>Designed and implemented UI and pixelated visual effects</li>
     </ul>
   </section>
 
   <!-- ===== Key Systems ===== -->
   <section class="project-section">
-    <h2>Key Gameplay Systems</h2>
+    <h2>Key Systems I Built</h2>
 
-    <h3>Interaction & Examination System</h3>
-    <p>
-      Player interactions were implemented using a component-driven architecture
-      that allowed designers to author interactive objects without custom code,
-      supporting rapid iteration and content expansion.
-    </p>
+    <h3>Tri-Inventory System</h3>
+    <ul>
+      <li>Designed and implemented an inventory system supporting items, weapons, and abilities</li>
+      <li>Integrated inventory data directly into combat, abilities, and player stats</li>
+      <li>Served as the backbone for player progression and build customization</li>
+    </ul>
 
-    <h3>Event-Driven Narrative Triggers</h3>
-    <p>
-      Narrative progression relied on decoupled event triggers and state flags
-      rather than linear scripting, allowing scenes to react dynamically to
-      player behavior and exploration order.
-    </p>
+    <h3>Modular Melee Combat System</h3>
+    <ul>
+      <li>Designed a polymorphic melee weapon framework</li>
+      <li>Enabled unique attack behaviors while sharing common interfaces</li>
+      <li>Fully integrated with inventory and player stats systems</li>
+    </ul>
 
-    <h3>Save / Load & State Persistence</h3>
-    <p>
-      Implemented a lightweight serialization system to persist world state,
-      player progress, and narrative flags across sessions without introducing
-      brittle dependencies between systems.
-    </p>
+    <h3>Modular Ability System</h3>
+    <ul>
+      <li>Designed a prefab-driven, polymorphic ability architecture</li>
+      <li>Allowed abilities to encapsulate behavior, visuals, and effects</li>
+      <li>Abilities are instantiated dynamically when equipped, enabling rapid content expansion</li>
+    </ul>
+
+    <h3>Modular Item System</h3>
+    <ul>
+      <li>Implemented a polymorphic item framework supporting unique behaviors per item</li>
+      <li>Integrated with inventory and player stat modifications</li>
+    </ul>
+
+    <h3>Player Stats & Effects System</h3>
+    <ul>
+      <li>Designed a stats system supporting damage modifiers, attack speed, and DOT effects</li>
+      <li>Unified stats across weapons, abilities, and items for consistent scaling</li>
+    </ul>
+
+    <h3>Refactored Randomized Exploration System</h3>
+    <ul>
+      <li>Refactored an existing non-Euclidean exploration system</li>
+      <li>Preserved the intended “shifting labyrinth” feel while improving player orientation</li>
+      <li>Introduced controlled randomness and periodic layout resets to balance confusion and clarity</li>
+    </ul>
+
+    <h3>Enemy AI Navigation</h3>
+    <ul>
+      <li>Implemented a context-aware navigation system without traditional pathfinding</li>
+      <li>Enabled flexible room creation and easy map expansion</li>
+    </ul>
+
+    <h3>Boss AI State Machines</h3>
+    <ul>
+      <li>Designed custom multi-phase state machines for each boss encounter</li>
+      <li>Integrated dialogue-driven cutscenes between phases</li>
+      <li>Supported behavior variation based on dialogue outcomes</li>
+    </ul>
+
+    <h3>Inventory Save/Load Integration</h3>
+    <ul>
+      <li>Assisted in integrating inventory and progression data with the save/load system</li>
+    </ul>
+
+    <h3>Pixelated VFX & Shaders</h3>
+    <ul>
+      <li>Created custom pixelated shaders and particle effects</li>
+      <li>Used for abilities, combat feedback, and environmental effects</li>
+    </ul>
   </section>
 
   <!-- ===== Technical Challenges ===== -->
   <section class="project-section">
     <h2>Technical Challenges & Solutions</h2>
+    <h3>Refactoring Exploration Without Breaking Design Intent</h3>
+    <p>
+      Playtesting revealed that the original fully random layout caused excessive disorientation. I 
+      led a refactor that introduced consistent structural generation with a probabilistic chance for 
+      doors to desynchronize, paired with periodic layout resets. This maintained the non-Euclidean 
+      theme while improving player comprehension and flow.
+    </p>
+
+    <h3>Designing Scalable Ability Architecture</h3>
+    <p>
+      To support a wide variety of abilities with unique behaviors and visuals, I designed a 
+      prefab-based polymorphic system where each ability encapsulates its logic and presentation. 
+      This allowed new abilities to be added with minimal engineering overhead and no changes to 
+      core player logic.
+    </p>
+  </section>
+
+    <!-- ===== Learnings ===== -->
+  <section class="project-section">
+    <h2>Results & Outcome</h2>
     <ul>
-      <li>
-        Prevented narrative logic from becoming tightly coupled to level scripts
-        by centralizing state evaluation and progression rules.
-      </li>
-      <li>
-        Balanced flexibility and control in the interaction system to avoid
-        designer-created edge cases that could break progression.
-      </li>
-      <li>
-        Optimized scene loading and memory usage to reduce hitching during
-        exploration-heavy gameplay.
-      </li>
+      <li>Released on Itch.io</li>
+      <li>Received strong feedback from professors and peers</li>
+      <li>Selected for conference showcase as a capstone project</li>
+      <li>Fully playable, feature-complete experience demonstrating complex system integration</li>
     </ul>
   </section>
 
@@ -140,16 +203,6 @@
        rel="noopener noreferrer">
       View Code Samples on GitHub →
     </a>
-  </section>
-
-  <!-- ===== Learnings ===== -->
-  <section class="project-section">
-    <h2>Key Takeaways</h2>
-    <ul>
-      <li>Event-driven systems scale better than linear scripting for narrative games</li>
-      <li>Clear ownership of game state prevents progression-breaking bugs</li>
-      <li>Systems must support pacing as much as mechanics in narrative titles</li>
-    </ul>
   </section>
 
   <!-- ===== Navigation ===== -->
