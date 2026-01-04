@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Atmospheric Scattering | Luke Gamage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/projects_style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Six+Caps&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Hero / Header -->
+    <header class="project-hero">
+        <h1>Atmospheric Scattering Shader</h1>
+        <p class="project-subtitle">
+        High-performance volumetric atmospheric rendering using raymarching and optical depth precomputation.
+        </p>
+
+        <div class="project-meta">
+        <span><strong>Languages:</strong> C#, HLSL</span>
+        <span><strong>Focus:</strong> Rendering, Shaders, GPU Optimization</span>
+        </div>
+    </header>
+
+    <!-- Overview -->
+    <section class="project-section">
+        <h2>Project Overview</h2>
+        <p>
+        An atmospheric scattering shader simulates the physical behavior of light as it interacts with a planet’s atmosphere.
+        I developed this shader both as a deep dive into advanced shader programming and as a foundational system for a
+        larger long-term project involving realistic planetary rendering.
+        </p>
+    </section>
+
+    <!-- Scientific Background -->
+    <section class="project-section">
+        <h2>Physical Basis of Atmospheric Scattering</h2>
+        <p>
+        Planetary atmospheres derive their appearance from how light scatters across different wavelengths.
+        This shader models two primary scattering phenomena: Rayleigh scattering and Mie scattering.
+        </p>
+        <p>
+        Rayleigh scattering occurs when light interacts with very small particles in the atmosphere and is primarily
+        responsible for an atmosphere’s color composition. Mie scattering, by contrast, occurs with larger particles
+        and produces more uniform wavelength scattering, contributing to brightness and glow around light sources.
+        </p>
+        <p>
+        The physical composition of an atmosphere determines how quickly different wavelengths scatter.
+        In Earth’s case, shorter blue wavelengths scatter first, resulting in blue skies during the day and
+        red hues during sunrise and sunset when light travels through more atmospheric volume.
+        </p>
+    </section>
+
+    <!-- Shader Implementation -->
+    <section class="project-section">
+        <h2>Shader Implementation</h2>
+        <p>
+        Simulating light scattering at a physically accurate level is computationally expensive and unsuitable
+        for real-time rendering if approached naively. Rather than simulating every ray emitted by a light source,
+        this shader works backwards by evaluating only the light that reaches the camera.
+        </p>
+        <p>
+        The core of the shader is a volumetric raymarcher that samples an inverse exponential density function
+        to approximate atmospheric density. The scattering calculations involve nested numerical integrations,
+        which are approximated using a fixed number of steps to balance visual quality and performance.
+        </p>
+        <p>
+        To maintain creative flexibility, scattering coefficients are supplied directly to the shader.
+        This allows for stylized or exaggerated atmospheres without relying strictly on physically derived values.
+        </p>
+    </section>
+
+    <!-- Optimization -->
+    <section class="project-section">
+        <h2>Performance Optimization</h2>
+        <p>
+        Nested loops are particularly expensive in shader code, especially in volumetric effects.
+        To reduce computational cost, this implementation leverages a precomputed Optical Depth texture.
+        </p>
+        <p>
+        The Optical Depth texture stores pre-evaluated light attenuation values based on altitude and angle
+        relative to the light source. By sampling this texture during raymarching, the shader avoids redundant
+        calculations and significantly improves runtime performance.
+        </p>
+        <p>
+        This optimization enables the shader to run in real time and makes it viable for use in interactive
+        applications such as games or simulations.
+        </p>
+    </section>
+
+    <!-- Future Work -->
+    <section class="project-section">
+        <h2>Future Directions</h2>
+        <p>
+        While the current implementation is performant, there are several avenues for further optimization.
+        One planned improvement is rendering the atmospheric effect at a reduced resolution and upscaling
+        it to full screen, reducing cost while preserving visual fidelity.
+        </p>
+        <p>
+        Another major goal is integrating this system with a volumetric cloud shader.
+        Both effects share similar scattering and sampling techniques, and consolidating them into a single
+        unified system could significantly reduce overall rendering cost.
+        </p>
+        <p>
+        Additional experimentation includes using the shader’s output as input to post-processing effects
+        to achieve more stylized or artistic atmospheric visuals.
+        </p>
+    </section>
+
+    <!-- ===== Deep Dive ===== -->
+  <section class="project-section">
+    <h2>Further Reading</h2>
+    <p>
+      A detailed breakdown of the algorithm design, implementation challenges,
+      and optimization process is available in the full article below.
+    </p>
+    <a href="https://t5impact.github.io/post/atmosphericscattering">Read the full technical article →</a>
+  </section>
+
+  <!-- ===== Navigation ===== -->
+  <footer class="project-footer">
+    <a href="https://t5impact.github.io/">← Back to Portfolio</a>
+  </footer>
+
+</body>
+</html>
