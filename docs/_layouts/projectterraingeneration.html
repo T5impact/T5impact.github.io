@@ -86,20 +86,20 @@
       The terrain generation pipeline is entirely GPU-driven after initial setup:
     </p>
     <p>
-      1. Hermite Data Generation
+      <strong>1. Hermite Data Generation</strong>
     </p>
     <ul>
       <li>Compute shader calculates Hermite data for the volumetric field</li>
     </ul>
     <p>
-      2. Octree Construction on the GPU
+      <strong>2. Octree Construction on the GPU</strong>
     </p>
     <ul>
       <li>A compute shader constructs an octree from the Hermite data</li>
       <li>Uses techniques inspired by parallel merge sort to avoid pure recursion</li>
     </ul>
     <p>
-      3. Mesh Generation
+      <strong>3. Mesh Generation</strong>
     </p>
     <ul>
       <li>A compute shader traverses the octree and Hermite data</li>
@@ -107,7 +107,7 @@
       <li>Resolves ambiguities and handles resolution transitions between LOD levels</li>
     </ul>
     <p>
-      4. Rendering & Physics
+      <strong>4. Rendering & Physics</strong>
     </p>
     <ul>
       <li>Generated mesh is rendered directly in the scene</li>
