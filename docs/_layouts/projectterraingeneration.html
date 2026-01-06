@@ -21,7 +21,7 @@
   <header class="project-hero">
     <h1>GPU Terrain Generation</h1>
     <p class="project-subtitle">
-      Systems / Graphics Programming Project
+      Systems / Graphics Programming Research Project
     </p>
 
     <ul class="project-meta">
@@ -40,12 +40,17 @@
 
   <!-- ===== Overview ===== -->
   <section class="project-section">
-    <h2>Overview</h2>
+    <h2>Project Overview</h2>
     <p>
-      This project explores real-time terrain generation using the
-      Cubical Marching Squares (CMS) algorithm sampled from a dynamically
-      generated Octree. The entire pipeline, consisting of data generation, spatial
-      subdivision, and mesh construction, runs in parallel on the GPU.
+      This project explores real-time procedural terrain generation capable of supporting caves, 
+      overhangs, and variable level-of-detail (LOD), which is a combination not well supported by 
+      common real-time terrain solutions. Most existing approaches rely on single-resolution grids, 
+      making them unsuitable for large-scale environments such as planets.
+    </p>
+    <p>
+      The goal of this research was to investigate a GPU-driven approach that could scale terrain detail 
+      dynamically based on distance from the camera, enabling large, seamless planetary terrain suitable 
+      for real-time gameplay.
     </p>
   </section>
 
@@ -53,105 +58,98 @@
   <section class="project-section">
     <h2>Problem Statement</h2>
     <p>
-      Traditional Marching Cubes struggles with sharp feature preservation
-      and does not integrate cleanly with variable level-of-detail systems.
-      Additionally, recursive spatial data structures such as Octrees are
-      inherently difficult to generate efficiently in a parallel GPU context.
+      Popular real-time terrain generation algorithms, like Marching Cubes, that support volumetric features 
+      (such as caves and overhangs) typically operate on uniform-resolution grids, preventing detail from 
+      falling off with distance. This severely limits scalability for large environments.
     </p>
     <p>
-      The goal of this project was to design a GPU-friendly terrain pipeline
-      that supports adaptive LOD while preserving surface features and
-      remaining performant.
+      This project investigates an approach that supports variable LOD while maintaining real-time performance, 
+      with the long-term goal of enabling procedural planet generation.
     </p>
+  </section>
+
+  <!-- ===== Project Scope and Intent ===== -->
+  <section class="project-section">
+    <h2>System Scope & Intent</h2>
+    <ul>
+      <li>Research-focused prototype developed as an extended academic assignment</li>
+      <li>Designed for real-time generation and editing, not offline baking</li>
+      <li>Intended as a foundation for a future game project involving large procedural planets</li>
+      <li>Emphasis on architectural feasibility and performance over content completeness</li>
+    </ul>
   </section>
 
   <!-- ===== High-Level Architecture ===== -->
   <section class="project-section">
     <h2>High-Level Architecture</h2>
-    <ul>
-      <li>Generate Hermite density and normal data using layered 3D noise</li>
-      <li>Construct an Octree entirely on the GPU via compute shaders</li>
-      <li>Store Octree data in a 3D texture for random-access sampling</li>
-      <li>Apply Cubical Marching Squares to generate mesh geometry</li>
-    </ul>
-  </section>
-
-  <!-- ===== Octree Generation ===== -->
-  <section class="project-section">
-    <h2>Parallel Octree Generation</h2>
     <p>
-      Because recursive subdivision introduces race conditions in parallel
-      environments, the Octree is generated in reverse: starting at maximum
-      subdivision and progressively un-subdividing nodes.
+      The terrain generation pipeline is entirely GPU-driven after initial setup:
     </p>
-
-    <ul>
-      <li>Octree construction implemented entirely on the GPU</li>
-      <li>Custom node metadata generated using parallel merge-style passes</li>
-      <li>Local GPU memory used to minimize synchronization overhead</li>
-      <li>Efficiency decreases as nodes are un-subdivided, a known tradeoff</li>
-    </ul>
-  </section>
-
-  <!-- ===== CMS Algorithm ===== -->
-  <section class="project-section">
-    <h2>Cubical Marching Squares</h2>
     <p>
-      CMS decomposes the 3D meshing problem into six 2D Marching Squares passes
-      per cube, allowing improved feature preservation and compatibility with
-      variable LOD.
+      1. Hermite Data Generation
     </p>
-
     <ul>
-      <li>Preserves sharp surface features better than Marching Cubes</li>
-      <li>Enables integration with adaptive Octree subdivision</li>
-      <li>Transition faces between LODs present the primary complexity</li>
+      <li>Compute shader calculates Hermite data for the volumetric field</li>
     </ul>
-  </section>
-
-  <!-- ===== Technical Challenges ===== -->
-  <section class="project-section">
-    <h2>Technical Challenges</h2>
-    <ul>
-      <li>
-        Resolving transition faces between neighboring Octree nodes of
-        differing subdivision levels
-      </li>
-      <li>
-        Preventing non-manifold geometry during mesh regeneration
-      </li>
-      <li>
-        Balancing GPU parallelism against memory coherence and access patterns
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===== Performance Considerations ===== -->
-  <section class="project-section">
-    <h2>Performance Considerations</h2>
-    <ul>
-      <li>All major stages execute on the GPU to minimize CPU-GPU transfers</li>
-      <li>Octree data stored in a 3D texture for cache-friendly access</li>
-      <li>Parallel execution maximized during initial subdivision stages</li>
-      <li>Known inefficiencies emerge during late-stage un-subdivision</li>
-    </ul>
-  </section>
-
-  <!-- ===== Results & Limitations ===== -->
-  <section class="project-section">
-    <h2>Results & Limitations</h2>
     <p>
-      The system successfully generates airtight meshes with variable LOD on
-      initial execution. However, repeated regeneration can introduce holes
-      at LOD transition boundaries, indicating unresolved edge cases in the
-      transition-face logic.
+      2. Octree Construction on the GPU
     </p>
+    <ul>
+      <li>A compute shader constructs an octree from the Hermite data</li>
+      <li>Uses techniques inspired by parallel merge sort to avoid pure recursion</li>
+    </ul>
+    <p>
+      3. Mesh Generation
+    </p>
+    <ul>
+      <li>A compute shader traverses the octree and Hermite data</li>
+      <li>Generates triangle meshes using Cubical Marching Squares</li>
+      <li>Resolves ambiguities and handles resolution transitions between LOD levels</li>
+    </ul>
+    <p>
+      4. Rendering & Physics
+    </p>
+    <ul>
+      <li>Generated mesh is rendered directly in the scene</li>
+      <li>Colliders are generated automatically from the output geometry</li>
+    </ul>
+  </section>
+
+  <!-- ===== GPU-Specific Design Decisions ===== -->
+  <section class="project-section">
+    <h2>GPU-Specific Design Decisions</h2>
+    <h3>GPU-Based Octree Construction</h3>
+    <p>
+      The primary technical challenge was generating an octree on the GPU, as recursive data 
+      structures are poorly suited to GPU architectures.
+    </p>
+    <ul>
+      <li>Initial CPU-based octree construction was too slow for real-time use</li>
+      <li>Refactored the process to run entirely on the GPU</li>
+      <li>Emulated recursive behavior using parallel-friendly techniques inspired by merge sort</li>
+      <li>Leveraged GPU execution groups and shared local memory to coordinate octree construction efficiently</li>
+    </ul>
+    <p>
+      This approach avoided pure recursion entirely while preserving the hierarchical structure needed for variable LOD.
+    </p>
+  </section>
+
+  <!-- ===== Scale & Performance Characteristics ===== -->
+  <section class="project-section">
+    <h2>Scale & Performance Characteristics</h2>
+    <ul>
+      <li>Designed to support large-scale terrain, including planetary surfaces</li>
+      <li>Variable LOD falloff reduces geometric density with distance from the camera</li>
+      <li>Terrain intended to be chunked, with seamless connections between chunk boundaries</li>
+      <li>System achieved real-time generation performance suitable for interactive exploration</li>
+    </ul>
   </section>
 
   <!-- ===== Learnings & Future Work ===== -->
   <section class="project-section">
     <h2>Learnings & Future Work</h2>
     <ul>
+      <li>Successfully demonstrated real-time terrain generation with variable LOD</li>
       <li>Recursive data structures require non-intuitive approaches on GPU</li>
       <li>CMS offers significant advantages for LOD-compatible meshing</li>
       <li>Future work includes planet-scale terrain and streaming</li>
